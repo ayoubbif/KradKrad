@@ -1,6 +1,5 @@
 import React from 'react';
-import Title from '../../styles/generic/Title';
 
-const HelloWorld: React.FC = () => <Title>Tanit OS</Title>;
+const HelloWorld: React.FC = () => <h1>Tanit OS</h1>;
 
 export default HelloWorld;
