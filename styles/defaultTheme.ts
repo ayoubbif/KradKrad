@@ -22,13 +22,12 @@ const sizes = {
 };
 
 const wallpaper = vantaClouds({
-  speed: 1.5,
-  skyColor: 0x636385,
-  cloudColor: 0x717188,
-  cloudShadowColor: 0x495362,
-  sunColor: 0xff2000,
-  sunGlareColor: 0x4dcc2e,
-  sunlightColor: 0x1666d1
+  skyColor: 0x1d3f4d,
+  cloudColor: 0x4a70a7,
+  cloudShadowColor: 0x452a7f,
+  sunColor: 0xdead11,
+  sunGlareColor: 0x3db18e,
+  sunlightColor: 0x93581d
 });
 
 const defaultTheme = {
