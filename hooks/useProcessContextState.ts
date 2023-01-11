@@ -1,9 +1,9 @@
 import { useState } from 'react';
+import { HelloWorld, Taskbar } from '../utils/processDirectory';
 import type { ProcessContextState } from '../types/contexts/process';
-import { getStartupProcesses } from '../utils/processDirectory';
 
 const useProcessContextState = (): ProcessContextState => {
-  const [processes] = useState(getStartupProcesses());
+  const [processes] = useState({ HelloWorld, Taskbar });
 
   return { processes };
 };
