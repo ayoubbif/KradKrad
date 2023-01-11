@@ -1,12 +1,7 @@
 import Document, {
-  Html,
-  Head,
-  Main,
-  NextScript,
   DocumentContext,
   DocumentInitialProps,
 } from "next/document";
-import { ReactElement } from "react";
 import { ServerStyleSheet } from "styled-components";
 
 const withServerStyleSheet = async (
@@ -36,18 +31,6 @@ class MyDocument extends Document {
     ctx: DocumentContext
   ): Promise<DocumentInitialProps> {
     return withServerStyleSheet(ctx);
-  }
-
-  render(): ReactElement {
-    return (
-      <Html lang="en">
-        <Head />
-        <body>
-          <Main />
-          <NextScript />
-        </body>
-      </Html>
-    );
   }
 }
 
