@@ -1,20 +1,21 @@
-import type { FC } from "react";
+import type { FC, ReactNode } from "react";
 import { useState, createContext } from "react";
-import type { Process } from "../types/utils/processDirectory";
+import type { ProcessContextState } from "../types/contexts/process";
 import processDirectory from "../utils/processDirectory";
 
-type ProcessContextState = {
-  processes: Partial<Process>;
-};
 
-const ProcessContext = createContext<ProcessContextState>({ processes: {} });
+interface Props {
+  children: ReactNode;
+}
 
-export const ProcessProvider: FC = ({ children }) => {
+const ProcessContext = createContext<ProcessContextState>({processes: {}});
+
+export const ProcessProvider: FC<Props> = ({ children }) => {
   const [processes] = useState(processDirectory);
 
   return (
     <ProcessContext.Provider value={{ processes }}>
-      {children}
+        {children}
     </ProcessContext.Provider>
   );
 };

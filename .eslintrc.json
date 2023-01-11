@@ -20,7 +20,9 @@
   "rules": {
     "max-lines": ["error", 80],
     "react/prop-types": "off",
+    "react/require-default-props": "off",
     "react/jsx-props-no-spreading": "off",
+    "react/jsx-no-constructed-context-values": "off",
     "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
     "semi": ["error", "always"],
     "import/extensions": [
