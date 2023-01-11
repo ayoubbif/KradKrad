@@ -1,8 +1,9 @@
-import type { ReactElement } from "react";
-import Title from "../styles/generic/Title";
+import type { ReactElement } from 'react';
+import ProcessLoader from '../contexts/process';
 
-const Index = (): ReactElement => {
-  return <Title>Hello</Title>;
-};
+export default function Home(): ReactElement {
+  return (
+    <ProcessLoader/>
+  );
+}
 
-export default Index;

@@ -1,9 +1,9 @@
 import type { FC } from "react";
 import { ThemeProvider } from "styled-components";
 // eslint-disable-next-line import/extensions
-import GlobalStyle from "../../styles/GlobalStyle";
-import themes from "../../styles/themes.json";
-import type { StyledAppProps } from "../../types/components/StyledApp";
+import GlobalStyle from "../styles/GlobalStyle";
+import themes from "../styles/themes.json";
+import type { StyledAppProps } from "../types/components/StyledApp";
 
 // eslint-disable-next-line react/function-component-definition
 const StyledApp: FC<StyledAppProps> = ({

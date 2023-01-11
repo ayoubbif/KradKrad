@@ -1,14 +1,14 @@
 import { render } from "@testing-library/react";
-import StyledApp from "../../pages/components/StyledApp";
+import StyledApp from "../../components/StyledApp";
 
 import Index from "../../pages/index";
 
-test("renders index page", () => {
-  const { getByText } = render(
+test("renders index page", async () => {
+  const { findByText } = render(
     <StyledApp>
       <Index />
     </StyledApp>
   );
-  const linkElement = getByText("Hello");
+  const linkElement = await findByText("Hello");
   expect(linkElement).toBeInTheDocument();
 });

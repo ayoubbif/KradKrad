@@ -1,7 +1,7 @@
 import type { FC } from "react";
 import Head from "next/head";
-import packageInfo from "../../package.json";
-import { MetaDataProps } from "../../types/components/MetaData";
+import packageInfo from "../package.json";
+import { MetaDataProps } from "../types/components/MetaData";
 
 const MetaData: FC<MetaDataProps> = ({
   title = packageInfo.name,
