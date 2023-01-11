@@ -1,10 +1,13 @@
 import type { AppProps } from "next/app";
-import type { ReactElement } from "react";
+import React from "react";
 import StyledApp from "../components/pages/StyledApp";
 import MetaData from "../components/pages/MetaData";
 import { SessionProvider } from "../contexts/session";
 
-export default function App({ Component, pageProps }: AppProps): ReactElement {
+export default function App({
+  Component,
+  pageProps,
+}: AppProps): React.ReactElement {
   return (
     <>
       <MetaData />
