@@ -1,4 +1,3 @@
-
 import Themes from "../types/styles/themes";
 import vantaClouds from "../utils/vantaClouds";
 
@@ -10,14 +9,12 @@ const defaultTheme = {
   },
   wallpaper: vantaClouds({
     speed: 1.5,
-    minHeight: 200.0,
-    minWidth: 200.0,
-    skyColor: 0x123123,
-    cloudColor: 0x7f7f7f,
-    cloudShadowColor: 0x2b4b6b,
-    sunColor: 0xe8361d,
-    sunGlareColor: 0x443433,
-    sunlightColor: 0x805808,
+    skyColor: 0x636385,
+    cloudColor: 0x717188,
+    cloudShadowColor: 0x495362,
+    sunColor: 0xff2000,
+    sunGlareColor: 0x4dcc2e,
+    sunlightColor: 0x1666d1,
   }),
 };
 
