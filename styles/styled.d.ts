@@ -8,6 +8,20 @@ declare module 'styled-components' {
       primary: string;
       window: string;
     };
-    wallpaper: WallpaperEffect;
+    sizes: {
+      clock: {
+        width: string;
+      };
+      startButton: {
+        width: string;
+      };
+      taskbar: {
+        height: string;
+        entry: {
+          width: string;
+        };
+      };
+    };
+    wallpaper?: WallpaperEffect;
   }
 }

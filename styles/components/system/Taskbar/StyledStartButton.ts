@@ -6,7 +6,7 @@ const StyledStartButton = styled.button`
   bottom: 0;
   left: 0;
   height: 100%;
-  width: 50px;
+  width: ${({ theme }) => theme.sizes.startButton.width};
 `;
 
 export default StyledStartButton;
