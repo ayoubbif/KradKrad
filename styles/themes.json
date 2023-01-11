@@ -2,7 +2,7 @@
   "default": {
     "colors": {
       "primary": "#000",
-      "window": "#CCCCFF"
+      "window": "#CCCCCC"
     }
   }
 }
