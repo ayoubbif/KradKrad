@@ -7,7 +7,7 @@ import type {
 import useProcessContextState from "../hooks/useProcessContextState";
 import { initialProcessContextState } from "../utils/initialContextState";
 
-const {Provider, Consumer} = createContext<ProcessContextState>(
+const { Provider, Consumer } = createContext<ProcessContextState>(
   initialProcessContextState
 );
 

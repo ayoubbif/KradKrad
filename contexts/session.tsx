@@ -8,14 +8,12 @@ interface Props {
   children: ReactNode;
 }
 
-const {Provider, Consumer} = createContext<SessionContextState>(
+const { Provider, Consumer } = createContext<SessionContextState>(
   initialSessionContextState
 );
 
 export const SessionProvider: FC<Props> = ({ children }) => (
-  <Provider value={useSessionContextState()}>
-    {children}
-  </Provider>
+  <Provider value={useSessionContextState()}>{children}</Provider>
 );
 
 export const SessionConsumer = Consumer;
