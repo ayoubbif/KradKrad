@@ -7,7 +7,7 @@ import type {
 import useProcessContextState from "../hooks/useProcessContextState";
 import { initialProcessContextState } from "../utils/initialContextState";
 
-const ProcessContext = createContext<ProcessContextState>(
+const {Provider, Consumer} = createContext<ProcessContextState>(
   initialProcessContextState
 );
 
@@ -15,9 +15,9 @@ export const ProcessProvider: FC<ProcessProviderProps> = ({
   children,
   startupProcesses,
 }) => (
-  <ProcessContext.Provider value={useProcessContextState(startupProcesses)}>
+  <Provider value={useProcessContextState(startupProcesses)}>
     {children}
-  </ProcessContext.Provider>
+  </Provider>
 );
 
-export const ProcessConsumer = ProcessContext.Consumer;
+export const ProcessConsumer = Consumer;
