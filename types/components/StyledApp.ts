@@ -1,4 +1,5 @@
 import React from "react";
+import type { DefaultTheme } from "styled-components";
 
 export type Theme = {
   colors: {
@@ -7,6 +8,6 @@ export type Theme = {
 };
 
 export type StyledAppProps = {
-  theme?: Theme;
+  theme?: DefaultTheme;
   children: React.ReactNode;
 };
