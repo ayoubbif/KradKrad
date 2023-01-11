@@ -3,7 +3,7 @@ import { ThemeProvider } from "styled-components";
 // eslint-disable-next-line import/extensions
 import GlobalStyle from "../../styles/GlobalStyle";
 import themes from "../../styles/themes.json";
-import type { StyledAppProps } from "../../types/StyledApp";
+import type { StyledAppProps } from "../../types/components/StyledApp";
 
 // eslint-disable-next-line react/function-component-definition
 const StyledApp: FC<StyledAppProps> = ({
@@ -12,9 +12,7 @@ const StyledApp: FC<StyledAppProps> = ({
 }) => (
   <>
     <GlobalStyle />
-    <ThemeProvider theme={theme}>
-        {children}
-    </ThemeProvider>
+    <ThemeProvider theme={theme}>{children}</ThemeProvider>
   </>
 );
 

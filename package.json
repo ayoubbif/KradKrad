@@ -1,5 +1,6 @@
 {
   "name": "thinith",
+  "description": "Thinith is the place to bo",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,6 +10,7 @@
     "lint": "next lint",
     "prettier": "prettier --write .",
     "stylelint": "stylelint .",
+    "eslint": "eslint .",
     "test": "jest",
     "test:watch": "jest --watch"
   },
