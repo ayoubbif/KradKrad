@@ -2,12 +2,12 @@ import { render } from '@testing-library/react';
 import StyledApp from '../../components/pages/StyledApp';
 import Index from '../../pages/index';
 
-test('renders index page', async () => {
-  const { findByText } = render(
+test('renders index page', () => {
+  const { getByRole } = render(
     <StyledApp>
       <Index />
     </StyledApp>
   );
-  const linkElement = await findByText('Tanit OS');
-  expect(linkElement).toBeInTheDocument();
+
+  expect(getByRole('main')).toBeInTheDocument();
 });

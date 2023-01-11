@@ -4,18 +4,14 @@ import StyledApp from '../components/pages/StyledApp';
 import MetaData from '../components/pages/MetaData';
 import { SessionProvider } from '../contexts/session';
 
-export default function App({
-  Component,
-  pageProps
-}: AppProps): React.ReactElement {
-  return (
-    <>
-      <MetaData />
-      <SessionProvider>
-        <StyledApp>
-          <Component {...pageProps} />
-        </StyledApp>
-      </SessionProvider>
-    </>
-  );
-}
+const App = ({ Component, pageProps }: AppProps): React.ReactElement => (
+  <>
+    <MetaData />
+    <SessionProvider>
+      <StyledApp>
+        <Component {...pageProps} />
+      </StyledApp>
+    </SessionProvider>
+  </>
+);
+export default App;
