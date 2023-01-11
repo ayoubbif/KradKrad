@@ -12,18 +12,22 @@ const disableControls = {
   gyroControls: false,
 };
 
+const isWebGL = typeof WebGLRenderingContext !== "undefined";
+
 const vantaClouds =
   (settings: VantaCloudsSettings): wallpaperEffect =>
   (desktopRef: React.RefObject<HTMLElement>) => {
-    const vantaEffect = CLOUDS({
-      el: desktopRef.current,
-      THREE,
-      ...disableControls,
-      ...settings,
-    });
+    const vantaEffect = isWebGL
+      ? CLOUDS({
+          el: desktopRef.current,
+          THREE,
+          ...disableControls,
+          ...settings,
+        })
+      : undefined;
 
     return () => {
-      vantaEffect.destroy();
+      vantaEffect?.destroy?.();
     };
   };
 export default vantaClouds;

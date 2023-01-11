@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const StyledStartButton = styled.ol`
+const StyledTaskbarEntries = styled.ol`
   position: absolute;
   background-color: yellow;
   left: 50px;
@@ -8,4 +8,4 @@ const StyledStartButton = styled.ol`
   width: 100%;
 `;
 
-export default StyledStartButton;
+export default StyledTaskbarEntries;
