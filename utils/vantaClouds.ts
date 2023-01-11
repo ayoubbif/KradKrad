@@ -1,4 +1,3 @@
-import React from "react";
 import * as THREE from "three";
 import CLOUDS from "vanta/dist/vanta.clouds.min";
 import {
@@ -16,10 +15,10 @@ const isWebGL = typeof WebGLRenderingContext !== "undefined";
 
 const vantaClouds =
   (settings: VantaCloudsSettings): wallpaperEffect =>
-  (desktopRef: React.RefObject<HTMLElement>) => {
-    const vantaEffect = isWebGL
+  (el) => {
+    const vantaEffect = el && isWebGL
       ? CLOUDS({
-          el: desktopRef.current,
+          el,
           THREE,
           ...disableControls,
           ...settings,

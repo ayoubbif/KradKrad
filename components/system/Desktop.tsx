@@ -7,7 +7,7 @@ interface DesktopProps {
 }
 
 const Desktop: React.FC<DesktopProps> = ({ children }) => {
-  const desktopRef = useRef<HTMLElement>(null);
+  const desktopRef = useRef<HTMLElement | null>(null);
 
   useWallpaper(desktopRef);
 
@@ -15,3 +15,4 @@ const Desktop: React.FC<DesktopProps> = ({ children }) => {
 };
 
 export default Desktop;
+

@@ -2,7 +2,7 @@ import dynamic from "next/dynamic";
 import Taskbar from "../components/system/Taskbar";
 import type { Processes } from "../types/contexts/process";
 
-const STARTUP_PROCESSES: string[] = ["HelloWorld","Taskbar"];
+const STARTUP_PROCESSES: string[] = ["HelloWorld", "Taskbar"];
 
 export const processDirectory: Processes = {
   HelloWorld: {
@@ -10,7 +10,7 @@ export const processDirectory: Processes = {
     hasWindow: true,
   },
   Taskbar: {
-    Component: Taskbar
+    Component: Taskbar,
   },
 };
 
