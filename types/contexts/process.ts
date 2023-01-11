@@ -2,7 +2,7 @@ import React from "react";
 
 export type Process = {
   Component: React.ComponentType;
-  hasWindow: boolean;
+  hasWindow?: boolean; //Gotta fix it later
 };
 
 export type Processes = {
@@ -13,7 +13,3 @@ export type ProcessContextState = {
   processes: Processes;
 };
 
-export type ProcessProviderProps = {
-  children: React.ReactNode;
-  startupProcesses: Processes;
-};
