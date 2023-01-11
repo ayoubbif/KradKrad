@@ -1,30 +1,10 @@
-import { useEffect } from "react";
-import type { RefObject } from "react";
-import * as THREE from "three";
-import CLOUDS from "vanta/dist/vanta.clouds.min";
+import React, { useContext, useEffect } from "react";
+import { ThemeContext } from "styled-components";
 
-const useWallpaper = (refElement: RefObject<HTMLElement>): void => {
-  useEffect(() => {
-    const vantaEffect = CLOUDS({
-      THREE,
-      el: refElement.current,
-      mouseControls: true,
-      touchControls: true,
-      gyroControls: false,
-      minHeight: 200.0,
-      minWidth: 200.0,
-      skyColor: 0x3b5f6a,
-      cloudColor: 0x577cb0,
-      cloudShadowColor: 0x475360,
-      sunColor: 0x349a35,
-      sunGlareColor: 0xe5430e,
-      sunlightColor: 0xca711a,
-    });
+const useWallpaper = (desktopRef: React.RefObject<HTMLElement>): void => {
+  const { wallpaper } = useContext(ThemeContext);
 
-    return () => {
-      vantaEffect.destroy();
-    };
-  }, [refElement]);
+  useEffect(() => wallpaper(desktopRef), [desktopRef, wallpaper]);
 };
 
 export default useWallpaper;
