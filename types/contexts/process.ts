@@ -2,7 +2,7 @@ import React from "react";
 
 export type Process = {
   Component: React.ComponentType;
-  hasWindow?: boolean; //Gotta fix it later
+  hasWindow: boolean;
 };
 
 export type Processes = {
@@ -12,4 +12,3 @@ export type Processes = {
 export type ProcessContextState = {
   processes: Processes;
 };
-

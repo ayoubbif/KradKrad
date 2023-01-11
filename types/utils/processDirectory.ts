@@ -4,6 +4,7 @@ import type { Processes } from "../contexts/process";
 const processDirectory: Processes = {
   HelloWorld: {
     Component: dynamic(() => import("../../components/apps/HelloWorld")),
+    hasWindow: true,
   },
 };
 

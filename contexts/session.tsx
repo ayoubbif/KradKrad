@@ -1,19 +1,11 @@
-import type { FC, ReactNode } from "react";
-import { createContext } from "react";
-import type { SessionContextState } from "../types/contexts/session";
 import useSessionContextState from "../hooks/useSessionContextState";
+import { SessionContextState } from "../types/contexts/session";
 import { initialSessionContextState } from "../utils/initialContextState";
+import contextFactory from "./contextFactory";
 
-interface Props {
-  children: ReactNode;
-}
-
-const { Provider, Consumer } = createContext<SessionContextState>(
-  initialSessionContextState
+const { Provider, Consumer } = contextFactory<SessionContextState>(
+  initialSessionContextState,
+  useSessionContextState
 );
 
-export const SessionProvider: FC<Props> = ({ children }) => (
-  <Provider value={useSessionContextState()}>{children}</Provider>
-);
-
-export const SessionConsumer = Consumer;
+export { Provider as SessionProvider, Consumer as SessionConsumer };
