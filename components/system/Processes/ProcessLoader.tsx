@@ -1,5 +1,5 @@
 import React from 'react';
-import { ProcessConsumer } from '../../contexts/process';
+import { ProcessConsumer } from '../../../contexts/process';
 import RenderProcess from './RenderProcess';
 
 const ProcessLoader: React.FC = () => (

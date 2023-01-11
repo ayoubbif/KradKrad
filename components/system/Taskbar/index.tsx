@@ -1,5 +1,5 @@
 import React from 'react';
-import StyledTaskbar from '../../styles/components/system/StyledTaskbar';
+import StyledTaskbar from '../../../styles/components/system/Taskbar/StyledTaskbar';
 import Clock from './Clock';
 import StartButton from './StartButton';
 import TaskbarEntries from './TaskbarEntries';

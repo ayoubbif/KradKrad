@@ -2,7 +2,7 @@ import * as THREE from 'three';
 import CLOUDS from 'vanta/dist/vanta.clouds.min';
 import {
   VantaCloudsSettings,
-  wallpaperEffect
+  WallpaperEffect
 } from '../types/styles/wallpaper';
 
 const disableControls = {
@@ -14,7 +14,7 @@ const disableControls = {
 const isWebGL = typeof WebGLRenderingContext !== 'undefined';
 
 const vantaClouds =
-  (settings: VantaCloudsSettings): wallpaperEffect =>
+  (settings: VantaCloudsSettings): WallpaperEffect =>
   (element) => {
     const vantaEffect =
       element && isWebGL

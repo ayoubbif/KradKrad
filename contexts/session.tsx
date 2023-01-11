@@ -1,7 +1,8 @@
 import useSessionContextState from '../hooks/useSessionContextState';
 import { SessionContextState } from '../types/contexts/session';
+import contextFactory from '../utils/contextFactory';
 import { initialSessionContextState } from '../utils/initialContextState';
-import contextFactory from './contextFactory';
+
 
 const { Provider, Consumer } = contextFactory<SessionContextState>(
   initialSessionContextState,

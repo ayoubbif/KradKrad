@@ -3,7 +3,7 @@ import vantaClouds from '../utils/vantaClouds';
 
 const defaultTheme = {
   colors: {
-    backgroundcolor: '#000',
+    background: '#000',
     primary: '#000',
     window: '#CCCCCC'
   },

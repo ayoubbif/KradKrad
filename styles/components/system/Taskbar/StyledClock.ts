@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const StyledClock = styled.time`
   position: absolute;
-  background-color: blue;
+  background-color: brown;
   right: 0;
   height: 100%;
   width: 100px;

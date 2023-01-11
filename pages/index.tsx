@@ -1,7 +1,7 @@
 import type { ReactElement } from 'react';
 import { ProcessProvider } from '../contexts/process';
-import ProcessLoader from '../components/system/ProcessLoader';
 import Desktop from '../components/system/Desktop';
+import ProcessLoader from '../components/system/Processes/ProcessLoader';
 
 export default function Home(): ReactElement {
   return (
