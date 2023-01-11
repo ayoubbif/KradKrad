@@ -1,6 +1,6 @@
-import type { Dispatch, SetStateAction } from "react";
+import React from "react";
 
 export type SessionContextState = {
   themeName: string;
-  setThemeName: Dispatch<SetStateAction<string>>;
+  setThemeName: React.Dispatch<React.SetStateAction<string>>;
 };

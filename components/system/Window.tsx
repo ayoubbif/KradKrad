@@ -1,11 +1,11 @@
-import type { FC, ReactNode } from "react";
-import StyledWindow from "../../styles/components/StyledWindow";
+import React from "react";
+import StyledWindow from "../../styles/components/system/StyledWindow";
 
 interface WindowProps {
-  children: ReactNode;
+  children: React.ReactNode;
 }
 
-const Window: FC<WindowProps> = ({ children }) => (
+const Window: React.FC<WindowProps> = ({ children }) => (
   <StyledWindow>{children}</StyledWindow>
 );
 

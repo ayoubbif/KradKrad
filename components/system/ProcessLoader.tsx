@@ -1,11 +1,11 @@
 import dynamic from "next/dynamic";
-import type { FC } from "react";
+import React from "react";
 import { ProcessConsumer } from "../../contexts/process";
 import { Process } from "../../types/contexts/process";
 
 const Window = dynamic(import("./Window"));
 
-const RenderProcess: FC<Process> = ({ Component, hasWindow }) =>
+const RenderProcess: React.FC<Process> = ({ Component, hasWindow }) =>
   hasWindow ? (
     <Window>
       <Component />
@@ -14,7 +14,7 @@ const RenderProcess: FC<Process> = ({ Component, hasWindow }) =>
     <Component />
   );
 
-const ProcessLoader: FC = () => (
+const ProcessLoader: React.FC = () => (
   <ProcessConsumer>
     {({ processes }) =>
       Object.entries(processes).map(([id, process]) => (

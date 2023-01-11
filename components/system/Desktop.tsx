@@ -1,12 +1,12 @@
-import { FC, ReactNode, useRef } from "react";
+import React, { useRef } from "react";
 import useWallpaper from "../../hooks/useWallpaper";
 import StyledDesktop from "../../styles/components/system/StyledDesktop";
 
 interface DesktopProps {
-  children: ReactNode;
+  children: React.ReactNode;
 }
 
-const Desktop: FC<DesktopProps> = ({ children }) => {
+const Desktop: React.FC<DesktopProps> = ({ children }) => {
   const desktopRef = useRef<HTMLElement>(null);
 
   useWallpaper(desktopRef);

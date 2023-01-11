@@ -1,14 +1,14 @@
-import type { FC, ReactNode } from "react";
+import React from "react";
 import { ThemeProvider } from "styled-components";
 import { SessionConsumer } from "../../contexts/session";
 import GlobalStyle from "../../styles/GlobalStyle";
 import themes from "../../styles/themes";
 
 interface StyledAppProps {
-  children: ReactNode;
+  children: React.ReactNode;
 }
 
-const StyledApp: FC<StyledAppProps> = ({ children }) => (
+const StyledApp: React.FC<StyledAppProps> = ({ children }) => (
   <SessionConsumer>
     {({ themeName }) => (
       <ThemeProvider theme={themes[themeName] || themes.defaultTheme}>
