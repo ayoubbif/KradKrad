@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 import { DefaultTheme } from "styled-components";
 
-export interface StyledAppProps {
+export type StyledAppProps = {
   children: ReactNode;
-  currentTheme: DefaultTheme
-}
+  currentTheme: DefaultTheme;
+};
