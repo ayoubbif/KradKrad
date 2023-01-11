@@ -1,5 +1,5 @@
-import React from "react";
-import StyledWindow from "../../styles/components/system/StyledWindow";
+import React from 'react';
+import StyledWindow from '../../styles/components/system/StyledWindow';
 
 interface WindowProps {
   children: React.ReactNode;

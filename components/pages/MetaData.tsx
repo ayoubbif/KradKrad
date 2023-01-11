@@ -1,6 +1,6 @@
-import type { FC } from "react";
-import Head from "next/head";
-import packageInfo from "../../package.json";
+import type { FC } from 'react';
+import Head from 'next/head';
+import packageInfo from '../../package.json';
 
 const MetaData: FC = () => (
   <Head>

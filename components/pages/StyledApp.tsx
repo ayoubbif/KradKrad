@@ -1,8 +1,8 @@
-import React from "react";
-import { ThemeProvider } from "styled-components";
-import { SessionConsumer } from "../../contexts/session";
-import GlobalStyle from "../../styles/GlobalStyle";
-import themes from "../../styles/themes";
+import React from 'react';
+import { ThemeProvider } from 'styled-components';
+import { SessionConsumer } from '../../contexts/session';
+import GlobalStyle from '../../styles/GlobalStyle';
+import themes from '../../styles/themes';
 
 interface StyledAppProps {
   children: React.ReactNode;

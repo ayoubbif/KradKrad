@@ -1,8 +1,8 @@
-import React, { createContext } from "react";
+import React, { createContext } from 'react';
 import type {
   ContextFactory,
-  ContextProviderProps,
-} from "../types/contexts/contextFactory";
+  ContextProviderProps
+} from '../types/contexts/contextFactory';
 
 const contextFactory: ContextFactory = (
   initialContextState,

@@ -9,7 +9,7 @@ export type VantaCloudsSettings = {
   sunlightColor?: number;
 };
 
-export type wallpaperEffect = (
+export type WallpaperEffect = (
   // eslint-disable-next-line no-unused-vars
-  el: HTMLElement | null
+  element: HTMLElement | null
 ) => () => void;
