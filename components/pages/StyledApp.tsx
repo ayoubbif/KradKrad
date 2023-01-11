@@ -9,16 +9,14 @@ interface StyledAppProps {
 }
 
 const StyledApp: FC<StyledAppProps> = ({ children }) => (
-  <>
-    <GlobalStyle />
-    <SessionConsumer>
-      {({ themeName }) => (
-        <ThemeProvider theme={themes[themeName] || themes.defaultTheme}>
-          {children}
-        </ThemeProvider>
-      )}
-    </SessionConsumer>
-  </>
+  <SessionConsumer>
+    {({ themeName }) => (
+      <ThemeProvider theme={themes[themeName] || themes.defaultTheme}>
+        <GlobalStyle />
+        {children}
+      </ThemeProvider>
+    )}
+  </SessionConsumer>
 );
 
 export default StyledApp;
