@@ -9,4 +9,3 @@ const { Provider, Consumer } = contextFactory<FileSystemContextState>(
 );
 
 export { Provider as FileSystemProvider, Consumer as FileSystemConsumer };
-
