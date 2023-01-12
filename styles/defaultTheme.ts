@@ -3,6 +3,7 @@ import vantaClouds from '../utils/vantaClouds';
 
 const colors = {
   background: '#000',
+  clockText: '#FFF',
   primary: '#000',
   startButton: '#FFF',
   taskbar: 'rgba(0, 0, 0, 60%)',
@@ -11,7 +12,7 @@ const colors = {
 
 const sizes = {
   clock: {
-    fontSize: '13px',
+    fontSize: '12px',
     width: '76px'
   },
   startButton: {
