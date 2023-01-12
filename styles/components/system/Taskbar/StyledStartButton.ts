@@ -6,7 +6,9 @@ const centered = `
   place-items: center;
 `;
 
-const StyledStartButton = styled.button`
+const StyledStartButton = styled.button.attrs({
+  type: 'button'
+})`
   ${centered};
   position: absolute;
   background-color: cyan;

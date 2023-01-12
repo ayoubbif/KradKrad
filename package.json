@@ -9,7 +9,7 @@
     "start": "next start",
     "lint": "next lint",
     "prettier": "prettier --write .",
-    "stylelint": "stylelint .",
+    "stylelint": "stylelint **/*.ts",
     "eslint": "eslint .",
     "test": "jest",
     "test:watch": "jest --watch"
