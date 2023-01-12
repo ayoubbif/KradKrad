@@ -22,6 +22,7 @@ const sizes = {
     width: '36px'
   },
   taskbar: {
+    blur: '7px',
     height: '30px',
     entry: {
       maxWidth: '161px'
