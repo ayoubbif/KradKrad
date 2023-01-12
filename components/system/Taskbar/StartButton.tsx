@@ -3,8 +3,8 @@ import StyledStartButton from '../../../styles/components/system/Taskbar/StyledS
 import { SiWindows95 } from 'react-icons/si';
 
 const StartButton = () => (
-  <StyledStartButton title="Start">
-    <SiWindows95 />
+  <StyledStartButton>
+    <SiWindows95 title="Start" />
   </StyledStartButton>
 );
 
