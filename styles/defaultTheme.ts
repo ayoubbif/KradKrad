@@ -11,11 +11,11 @@ const colors = {
 
 const sizes = {
   clock: {
-    size: '13px',
+    fontSize: '13px',
     width: '76px'
   },
   startButton: {
-    size: '22px',
+    iconSize: '22px',
     width: '36px'
   },
   taskbar: {
