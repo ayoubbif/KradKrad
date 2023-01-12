@@ -1,8 +1,8 @@
-import type { FC } from 'react';
+import React from 'react';
 import Head from 'next/head';
 import packageInfo from '../../package.json';
 
-const MetaData: FC = () => (
+const MetaData = (): JSX.Element => (
   <Head>
     <title>{packageInfo.name}</title>
     <meta name="description" content={packageInfo.description} />

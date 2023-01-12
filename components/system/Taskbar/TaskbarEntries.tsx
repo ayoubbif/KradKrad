@@ -2,7 +2,7 @@ import React from 'react';
 import StyledTaskbarEntries from '../../../styles/components/system/Taskbar/StyledTaskbarEntries';
 import TaskbarEntry from './TaskbarEntry';
 
-const TaskbarEntries: React.FC = () => (
+const TaskbarEntries = (): JSX.Element => (
   <StyledTaskbarEntries>
     <TaskbarEntry />
   </StyledTaskbarEntries>
