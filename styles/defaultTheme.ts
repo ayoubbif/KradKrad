@@ -4,21 +4,18 @@ import vantaClouds from '../utils/vantaClouds';
 const colors = {
   background: '#000',
   primary: '#000',
+  startButton: '#FFF',
   taskbar: 'rgba(0, 0, 0, 60%)',
   window: '#CCCCCC'
 };
 
-const fonts = {
-  clock: {
-    size: '13px'
-  }
-};
-
 const sizes = {
   clock: {
+    size: '13px',
     width: '76px'
   },
   startButton: {
+    size: '22px',
     width: '36px'
   },
   taskbar: {
@@ -42,7 +39,6 @@ const wallpaper = vantaClouds({
 
 const defaultTheme: DefaultTheme = {
   colors,
-  fonts,
   sizes,
   wallpaper
 };
