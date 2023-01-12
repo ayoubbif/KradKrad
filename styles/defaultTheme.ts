@@ -10,19 +10,23 @@ const colors = {
   window: '#CCCCCC'
 };
 
+const date: Intl.DateTimeFormatOptions = {
+  weekday: 'long',
+  month: 'long',
+  day: 'numeric',
+  year: 'numeric'
+};
+
+const time: Intl.DateTimeFormatOptions = {
+  hour: 'numeric',
+  minute: '2-digit',
+  second: '2-digit',
+  hour12: true
+};
+
 const formats = {
-  date: {
-    weekday: 'long',
-    month: 'long',
-    day: 'numeric',
-    year: 'numeric'
-  },
-  time: {
-    hour: 'numeric',
-    minute: '2-digit',
-    second: '2-digit',
-    hour12: true
-  }
+  date,
+  time
 };
 
 const sizes = {
