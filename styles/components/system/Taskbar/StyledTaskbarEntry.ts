@@ -10,7 +10,7 @@ const StyledTaskbarEntry = styled.li`
   ${centered};
   background-color: red;
   height: 100%;
-  width: ${({ theme }) => theme.sizes.taskbar.entry.width};
+  max-width: ${({ theme }) => theme.sizes.taskbar.entry.maxWidth};
 `;
 
 export default StyledTaskbarEntry;

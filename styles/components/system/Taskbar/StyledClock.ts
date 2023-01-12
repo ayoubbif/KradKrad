@@ -9,7 +9,8 @@ const centered = `
 const StyledClock = styled.time`
   ${centered};
   position: absolute;
-  background-color: yellow;
+  background-color: green;
+  font-size: ${({ theme }) => theme.fonts.clock.size};
   height: 100%;
   right: 0;
   width: ${({ theme }) => theme.sizes.clock.width};

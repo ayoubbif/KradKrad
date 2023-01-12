@@ -6,17 +6,23 @@ const colors = {
   window: '#CCCCCC'
 };
 
+const fonts = {
+  clock: {
+    size: '13px'
+  }
+};
+
 const sizes = {
   clock: {
-    width: '100px'
+    width: '76px'
   },
   startButton: {
-    width: '50px'
+    width: '36px'
   },
   taskbar: {
-    height: '40px',
+    height: '30px',
     entry: {
-      width: '80px'
+      maxWidth: '161px',
     }
   }
 };
@@ -32,6 +38,7 @@ const wallpaper = vantaClouds({
 
 const defaultTheme = {
   colors,
+  fonts,
   sizes,
   wallpaper
 };

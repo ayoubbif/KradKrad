@@ -8,6 +8,11 @@ declare module 'styled-components' {
       primary: string;
       window: string;
     };
+    fonts: {
+      clock: {
+        size: string;
+      };
+    };
     sizes: {
       clock: {
         width: string;
@@ -18,7 +23,7 @@ declare module 'styled-components' {
       taskbar: {
         height: string;
         entry: {
-          width: string;
+          maxWidth: string;
         };
       };
     };
