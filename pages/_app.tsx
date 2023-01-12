@@ -5,13 +5,11 @@ import MetaData from '../components/pages/MetaData';
 import { SessionProvider } from '../contexts/session';
 
 const App = ({ Component, pageProps }: AppProps): React.ReactElement => (
-  <>
-    <MetaData />
     <SessionProvider>
       <StyledApp>
+        <MetaData />
         <Component {...pageProps} />
       </StyledApp>
     </SessionProvider>
-  </>
 );
 export default App;
