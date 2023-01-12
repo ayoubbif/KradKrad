@@ -1,3 +1,4 @@
+import { DefaultTheme } from 'styled-components';
 import vantaClouds from '../utils/vantaClouds';
 
 const colors = {
@@ -36,7 +37,7 @@ const wallpaper = vantaClouds({
   sunlightColor: 0x93581d
 });
 
-const defaultTheme = {
+const defaultTheme: DefaultTheme = {
   colors,
   fonts,
   sizes,
