@@ -1,15 +1,16 @@
 import React from 'react';
 import { ProcessConsumer } from '../../../contexts/process';
-import { Process } from '../../../types/contexts/process';
+import { Processes } from '../../../types/contexts/process';
 import RenderProcess from './RenderProcess';
 
-const ProcessesReducer = ([id, process]: [string, Process]) => (
-  <RenderProcess key={id} {...process} />
-);
+const renderProcesses = (processes: Processes) =>
+  Object.entries(processes).map(([id, process]) => (
+    <RenderProcess key={id} {...process} />
+  ));
 
 const ProcessLoader = (): JSX.Element => (
   <ProcessConsumer>
-    {({ processes }) => Object.entries(processes).map(ProcessesReducer)}
+    {({ processes }) => renderProcesses(processes)}
   </ProcessConsumer>
 );
 
