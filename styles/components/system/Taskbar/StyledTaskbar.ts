@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 const StyledTaskbar = styled.nav`
   background-color: ${({ theme }) => theme.colors.taskbar};
+  backdrop-filter: blur(3px);
   position: absolute;
   bottom: 0;
   left: 0;

@@ -1,5 +1,8 @@
 import React, { createContext } from 'react';
-import type { ContextProviderProps } from '../types/contexts/contextFactory';
+
+interface ContextProviderProps extends React.PropsWithChildren {
+  children: React.ReactNode;
+}
 
 export type ContextFactory = <T>(
   initialContextState: T,
