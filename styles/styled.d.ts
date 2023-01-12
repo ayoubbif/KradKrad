@@ -5,11 +5,13 @@ declare module 'styled-components' {
   export interface DefaultTheme {
     colors: {
       background: string;
+      borderColor: string;
       clockText: string;
       primary: string;
       startButton: string;
       taskbar: string;
       window: string;
+      opaqueWhite: string;
     };
     formats: {
       date: Intl.DateTimeFormatOptions;
@@ -28,6 +30,8 @@ declare module 'styled-components' {
         blur: string;
         height: string;
         entry: {
+          borderSize: string;
+          fontSize: string;
           maxWidth: string;
         };
       };
