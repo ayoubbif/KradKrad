@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 const StyledTaskbar = styled.nav`
+  background-color: ${({ theme }) => theme.colors.taskbar};
   position: absolute;
-  background-color: black;
   bottom: 0;
   left: 0;
   right: 0;

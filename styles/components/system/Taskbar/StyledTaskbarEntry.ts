@@ -8,7 +8,6 @@ const centered = `
 
 const StyledTaskbarEntry = styled.li`
   ${centered};
-  background-color: red;
   height: 100%;
   max-width: ${({ theme }) => theme.sizes.taskbar.entry.maxWidth};
 `;

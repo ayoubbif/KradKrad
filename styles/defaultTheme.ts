@@ -4,6 +4,7 @@ import vantaClouds from '../utils/vantaClouds';
 const colors = {
   background: '#000',
   primary: '#000',
+  taskbar: 'rgba(0, 0, 0, 60%)',
   window: '#CCCCCC'
 };
 
@@ -34,7 +35,8 @@ const wallpaper = vantaClouds({
   cloudShadowColor: 0x452a7f,
   sunColor: 0xdead11,
   sunGlareColor: 0x3db18e,
-  sunlightColor: 0x93581d
+  sunlightColor: 0x93581d,
+  speed: 1.0
 });
 
 const defaultTheme: DefaultTheme = {
