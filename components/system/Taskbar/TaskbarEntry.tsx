@@ -1,6 +1,5 @@
-import React from 'react';
 import Image from 'next/image';
-import StyledTaskbarEntry from '../../../styles/components/system/Taskbar/StyledTaskbarEntry';
+import StyledTaskbarEntry from 'styles/components/system/Taskbar/StyledTaskbarEntry';
 
 type TaskbarEntryProps = {
   icon: string;

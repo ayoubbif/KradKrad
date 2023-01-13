@@ -1,5 +1,5 @@
+import { useFileSystem } from 'contexts/fileSystem';
 import { useEffect, useState } from 'react';
-import { useFileSystem } from '../contexts/fileSystem';
 
 const useFiles = (
   directory: string,

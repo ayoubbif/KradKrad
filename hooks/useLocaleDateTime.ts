@@ -1,6 +1,6 @@
+import config from 'next.config';
 import { useRouter } from 'next/router';
 import { useTheme } from 'styled-components';
-import config from '../next.config';
 
 type LocaleTimeDate = {
   date: string;

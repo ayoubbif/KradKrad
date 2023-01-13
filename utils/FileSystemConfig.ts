@@ -1,13 +1,13 @@
-import { FileSystemConfiguration } from 'browserfs';
-import publicFileSytemIndex from '../public.json';
+import type { FileSystemConfiguration } from 'browserfs';
+import publicFileSystemIndex from 'public.json';
 
 const FileSystemConfig: FileSystemConfiguration = {
   fs: 'OverlayFS',
   options: {
     readable: {
-      fs: 'XmlHTTPRequest',
+      fs: 'XmlHttpRequest',
       options: {
-        index: publicFileSytemIndex
+        index: publicFileSystemIndex
       }
     },
     writable: {

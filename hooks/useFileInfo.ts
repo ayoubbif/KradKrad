@@ -1,8 +1,8 @@
+import { useFileSystem } from 'contexts/fileSystem';
 import { extname } from 'path';
 import { useEffect, useState } from 'react';
-import { useFileSystem } from '../contexts/fileSystem';
-import { IMAGE_FILE_EXTENSIONS } from '../utils/constants';
-import { getProcessByFileExtension, getShortcut } from '../utils/fileFunctions';
+import { IMAGE_FILE_EXTENSIONS } from 'utils/constants';
+import { getProcessByFileExtension, getShortcut } from 'utils/fileFunctions';
 
 type FileInfo = {
   icon: string;
@@ -15,12 +15,12 @@ const useFileInfo = (path: string): FileInfo => {
   const { fs } = useFileSystem();
 
   useEffect(() => {
-    console.log('extension');
     if (fs) {
       const extension = extname(path);
-      console.log('extension');
+
       if (extension === '.url') {
         getShortcut(path, fs).then(({ URL, IconFile }) => {
+          console.log(extension);
           setIcon(IconFile);
           setPid(URL);
         });

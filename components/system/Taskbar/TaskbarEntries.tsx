@@ -1,7 +1,6 @@
-import React from 'react';
-import { ProcessConsumer } from '../../../contexts/process';
-import StyledTaskbarEntries from '../../../styles/components/system/Taskbar/StyledTaskbarEntries';
-import TaskbarEntry from './TaskbarEntry';
+import TaskbarEntry from 'components/system/Taskbar/TaskbarEntry';
+import { ProcessConsumer } from 'contexts/process';
+import StyledTaskbarEntries from 'styles/components/system/Taskbar/StyledTaskbarEntries';
 
 const TaskbarEntries = (): JSX.Element => (
   <StyledTaskbarEntries>

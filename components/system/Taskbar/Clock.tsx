@@ -1,7 +1,7 @@
-import { useState, useCallback } from 'react';
-import useLocaleDateTime from '../../../hooks/useLocaleDateTime';
-import useSyncedClock from '../../../hooks/useSyncedClock';
-import StyledClock from '../../../styles/components/system/Taskbar/StyledClock';
+import useLocaleDateTime from 'hooks/useLocaleDateTime';
+import useSyncedClock from 'hooks/useSyncedClock';
+import { useCallback, useState } from 'react';
+import StyledClock from 'styles/components/system/Taskbar/StyledClock';
 
 const Clock = (): JSX.Element => {
   const [now, setNow] = useState(new Date());

@@ -1,5 +1,5 @@
 import 'styled-components';
-import { WallpaperEffect } from '../types/styles/wallpaper';
+import { WallpaperEffect } from 'types/styles/wallpaper';
 
 declare module 'styled-components' {
   export interface DefaultTheme {

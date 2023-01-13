@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import type { SessionContextState } from '../types/contexts/session';
+import type { SessionContextState } from 'types/contexts/session';
 
 const useSessionContextState = (): SessionContextState => {
   const [themeName, setThemeName] = useState('');

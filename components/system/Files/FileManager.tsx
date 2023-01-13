@@ -1,7 +1,7 @@
+import FileEntry from 'components/system/Files/FileEntry';
+import useFiles from 'hooks/useFiles';
 import { basename, extname, resolve } from 'path';
-import useFiles from '../../../hooks/useFiles';
-import StyledFileManager from '../../../styles/components/system/Files/StyledFileManager';
-import FileEntry from './FileEntry';
+import StyledFileManager from 'styles/components/system/Files/StyledFileManager';
 
 type FileManagerProps = {
   directory: string;

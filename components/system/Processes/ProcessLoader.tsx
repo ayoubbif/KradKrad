@@ -1,6 +1,5 @@
-import React from 'react';
-import RenderProcess from './RenderProcess';
-import { ProcessConsumer } from '../../../contexts/process';
+import RenderProcess from 'components/system/Processes/RenderProcess';
+import { ProcessConsumer } from 'contexts/process';
 
 const ProcessLoader = (): JSX.Element => (
   <ProcessConsumer>

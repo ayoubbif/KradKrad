@@ -1,5 +1,3 @@
-import React from 'react';
-
 export type Process = {
   Component: React.ComponentType;
   hasWindow?: boolean;
@@ -7,16 +5,16 @@ export type Process = {
   title: string;
 };
 
+export type ProcessesMap = (
+  callback: ([id, process]: [string, Process]) => JSX.Element
+) => JSX.Element[];
+
 export type Processes = {
-  [pid: string]: Process;
+  [id: string]: Process;
 };
 
 export type ProcessContextState = {
-  close: (pid: string) => void;
-  open: (pid: string) => void;
+  close: (id: string) => void;
+  open: (id: string) => void;
   mapProcesses: ProcessesMap;
 };
-
-export type ProcessesMap = (
-  callback: ([pid, process]: [string, Process]) => JSX.Element
-) => JSX.Element[];

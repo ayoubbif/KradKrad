@@ -1,15 +1,15 @@
-import useSessionContextState from '../hooks/useSessionContextState';
-import { SessionContextState } from '../types/contexts/session';
-import contextFactory from '../utils/contextFactory';
-import { initialSessionContextState } from '../utils/initialContextState';
+import useSessionContextState from 'hooks/useSessionContextState';
+import type { SessionContextState } from 'types/contexts/session';
+import contextFactory from 'utils/contextFactory';
+import { initialSessionContextState } from 'utils/initialContextStates';
 
-const { Provider, Consumer, useContext } = contextFactory<SessionContextState>(
+const { Consumer, Provider, useContext } = contextFactory<SessionContextState>(
   initialSessionContextState,
   useSessionContextState
 );
 
 export {
-  Provider as SessionProvider,
   Consumer as SessionConsumer,
+  Provider as SessionProvider,
   useContext as useSession
 };

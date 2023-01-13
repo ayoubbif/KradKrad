@@ -1,5 +1,5 @@
 import { DefaultTheme } from 'styled-components';
-import vantaClouds from '../utils/vantaClouds';
+import vantaClouds from 'utils/vantaClouds';
 
 const colors = {
   background: '#000',

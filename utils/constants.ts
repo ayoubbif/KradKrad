@@ -1,8 +1,23 @@
+export const MILLISECONDS_IN_SECOND = 1000;
+
 export const IMAGE_FILE_EXTENSIONS = [
-  '.png',
-  '.jpg',
-  '.jpeg',
-  '.gif',
+  '.apng',
+  '.avif',
   '.bmp',
-  '.svg'
+  '.cur',
+  '.gif',
+  '.ico',
+  '.jfif',
+  '.jif',
+  '.jpe',
+  '.jpeg',
+  '.jpg',
+  '.pjp',
+  '.pjpeg',
+  '.png',
+  '.svg',
+  '.tif',
+  '.tiff',
+  '.webp',
+  '.xbm'
 ];

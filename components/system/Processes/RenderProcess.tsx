@@ -1,7 +1,6 @@
-import React from 'react';
 import dynamic from 'next/dynamic';
 
-const Window = dynamic(import('../Window'));
+const Window = dynamic(() => import('components/system/Window'));
 
 const withWindow = (Component: React.ComponentType) => (
   <Window>
