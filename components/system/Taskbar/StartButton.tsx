@@ -7,8 +7,8 @@ const StartButton = () => (
   <ProcessConsumer>
     {({ close, open }) => (
       <StyledStartButton
-        onClick={() => open('HelloWorld')}
-        onDoubleClick={() => close('HelloWorld')}
+        onClick={() => open('Computer')}
+        onDoubleClick={() => close('Computer')}
         title="Start"
       >
         <StartButtonIcon />

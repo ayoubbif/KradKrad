@@ -4,6 +4,7 @@ import { useCallback } from 'react';
 import Image from 'next/image';
 import StyledFileEntry from 'styles/components/system/Files/StyledFileEntry';
 import Button from 'styles/generic/Button';
+import useDoubleClick from 'hooks/useDoubleClick';
 
 type FileEntryProps = {
   name: string;
@@ -13,11 +14,11 @@ type FileEntryProps = {
 const FileEntry = ({ name, path }: FileEntryProps): JSX.Element => {
   const { icon, pid } = useFileInfo(path);
   const { open } = useProcesses();
-  const onActivate = useCallback(() => open(pid), [open, pid]);
+  const onClick = useCallback(() => open(pid), [open, pid]);
 
   return (
     <StyledFileEntry>
-      <Button onClick={onActivate} onKeyDown={onActivate}>
+      <Button onClick={useDoubleClick(onClick)}>
         <figure>
           {icon && (
             <Image
