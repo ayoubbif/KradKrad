@@ -3,6 +3,7 @@ import useFileInfo from 'hooks/useFileInfo';
 import { useCallback } from 'react';
 import Image from 'next/image';
 import StyledFileEntry from 'styles/components/system/Files/StyledFileEntry';
+import Button from 'styles/generic/Button';
 
 type FileEntryProps = {
   name: string;
@@ -16,7 +17,7 @@ const FileEntry = ({ name, path }: FileEntryProps): JSX.Element => {
 
   return (
     <StyledFileEntry>
-      <button type="button" onClick={onActivate} onKeyDown={onActivate}>
+      <Button onClick={onActivate} onKeyDown={onActivate}>
         <figure>
           {icon && (
             <Image
@@ -29,7 +30,7 @@ const FileEntry = ({ name, path }: FileEntryProps): JSX.Element => {
           )}
           <figcaption>{name}</figcaption>
         </figure>
-      </button>
+      </Button>
     </StyledFileEntry>
   );
 };

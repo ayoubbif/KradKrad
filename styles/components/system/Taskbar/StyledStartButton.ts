@@ -1,15 +1,10 @@
 import styled from 'styled-components';
+import Button from 'styles/generic/Button';
 
-const centered = `
+const StyledStartButton = styled(Button)`
   display: flex;
   place-content: center;
   place-items: center;
-`;
-
-const StyledStartButton = styled.button.attrs({
-  type: 'button'
-})`
-  ${centered};
   color: ${({ theme }) => theme.colors.startButton};
   font-size: ${({ theme }) => theme.sizes.startButton.iconSize};
   position: absolute;
