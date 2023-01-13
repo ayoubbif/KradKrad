@@ -5,7 +5,7 @@ const StyledStartButton = styled(Button)`
   display: flex;
   place-content: center;
   place-items: center;
-  color: ${({ theme }) => theme.colors.startButton};
+  fill: ${({ theme }) => theme.colors.startButton};
   font-size: ${({ theme }) => theme.sizes.startButton.iconSize};
   position: absolute;
   bottom: 0;
@@ -13,11 +13,15 @@ const StyledStartButton = styled(Button)`
   height: 100%;
   width: ${({ theme }) => theme.sizes.startButton.width};
 
+  svg {
+    height: 30px;
+  }
+
   &:hover {
     background-color: ${({ theme }) => theme.colors.taskbarHover};
 
     svg {
-      color: ${({ theme }) => theme.colors.highlight};
+      fill: ${({ theme }) => theme.colors.highlight};
     }
   }
 `;

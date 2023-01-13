@@ -1,7 +1,7 @@
 import { ProcessConsumer } from 'contexts/process';
 import React from 'react';
-import { GiGreatPyramid } from 'react-icons/gi';
 import StyledStartButton from 'styles/components/system/Taskbar/StyledStartButton';
+import { StartButtonIcon } from '../Icons';
 
 const StartButton = () => (
   <ProcessConsumer>
@@ -9,8 +9,9 @@ const StartButton = () => (
       <StyledStartButton
         onClick={() => open('HelloWorld')}
         onDoubleClick={() => close('HelloWorld')}
+        title="Start"
       >
-        <GiGreatPyramid title="Start" />
+        <StartButtonIcon />
       </StyledStartButton>
     )}
   </ProcessConsumer>
