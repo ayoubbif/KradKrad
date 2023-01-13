@@ -1,5 +1,6 @@
 import 'styled-components';
-import { WallpaperEffect } from 'types/styles/wallpaper';
+
+export type WallpaperEffect = (element: HTMLElement | null) => () => void;
 
 declare module 'styled-components' {
   export interface DefaultTheme {
