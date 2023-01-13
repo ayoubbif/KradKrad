@@ -4,7 +4,6 @@ const StyledDesktop = styled.main`
   background-color: ${({ theme }) => theme.colors.background};
   height: 100vh;
   width: 100vw;
-  overflow: hidden; // Prevents scrollbars from appearing
   position: fixed;
   top: 0;
   bottom: 0;
