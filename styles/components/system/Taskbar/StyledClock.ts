@@ -8,12 +8,16 @@ const centered = `
 
 const StyledClock = styled.time`
   ${centered};
-  color: ${({ theme }) => theme.colors.clockText};
+  color: ${({ theme }) => theme.colors.text};
   position: absolute;
   font-size: ${({ theme }) => theme.sizes.clock.fontSize};
   height: 100%;
   right: 0;
   width: ${({ theme }) => theme.sizes.clock.width};
+
+  &:hover {
+    background-color: ${({ theme }) => theme.colors.taskbarHover};
+  }
 `;
 
 export default StyledClock;

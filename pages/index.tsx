@@ -1,11 +1,14 @@
-import type { ReactElement } from 'react';
-import { ProcessProvider } from '../contexts/process';
-import ProcessLoader from '../components/system/Processes/ProcessLoader';
-import Desktop from '../components/system/Desktop';
+import Desktop from 'components/system/Desktop';
+import FileManager from 'components/system/Files/FileManager';
+import ProcessLoader from 'components/system/Processes/ProcessLoader';
+import Taskbar from 'components/system/Taskbar';
+import { ProcessProvider } from 'contexts/process';
 
-const Home = (): ReactElement => (
+const Home = (): React.ReactElement => (
   <Desktop>
     <ProcessProvider>
+      <FileManager directory="/desktop" />
+      <Taskbar />
       <ProcessLoader />
     </ProcessProvider>
   </Desktop>

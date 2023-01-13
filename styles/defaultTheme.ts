@@ -1,59 +1,58 @@
 import { DefaultTheme } from 'styled-components';
-import vantaClouds from '../utils/vantaClouds';
+import vantaClouds from 'utils/vantaClouds';
 
 const colors = {
   background: '#000',
-  clockText: '#FFF',
-  primary: '#000',
-  startButton: '#FFF',
-  taskbar: 'rgba(0, 0, 0, 60%)',
-  window: '#CCCCCC'
-};
-
-const date: Intl.DateTimeFormatOptions = {
-  weekday: 'long',
-  month: 'long',
-  day: 'numeric',
-  year: 'numeric'
-};
-
-const time: Intl.DateTimeFormatOptions = {
-  hour: 'numeric',
-  minute: '2-digit',
-  second: '2-digit',
-  hour12: true
+  highlight: '#000666',
+  startButton: '#000',
+  taskbar: 'hsla(174, 16%, 55%, 0.69)',
+  taskbarHover: 'hsla(0, 37%, 67%, 1)',
+  window: '#C3C3C3',
+  text: '#000'
 };
 
 const formats = {
-  date,
-  time
+  date: <Intl.DateTimeFormatOptions>{
+    weekday: 'long',
+    month: 'long',
+    day: 'numeric',
+    year: 'numeric'
+  },
+  time: <Intl.DateTimeFormatOptions>{
+    hour: 'numeric',
+    minute: '2-digit',
+    second: '2-digit',
+    hour12: true
+  }
 };
 
 const sizes = {
   clock: {
-    fontSize: '12px',
-    width: '76px'
+    fontSize: '14px',
+    width: '95px'
   },
   startButton: {
-    iconSize: '22px',
-    width: '36px'
+    iconSize: '27px',
+    width: '45px'
   },
   taskbar: {
     blur: '7px',
-    height: '30px',
+    height: '50px',
     entry: {
+      borderSize: '3px',
+      fontSize: '12px',
       maxWidth: '161px'
     }
   }
 };
 
 const wallpaper = vantaClouds({
-  skyColor: 0x1d3f4d,
-  cloudColor: 0x4a70a7,
-  cloudShadowColor: 0x452a7f,
-  sunColor: 0xdead11,
-  sunGlareColor: 0x3db18e,
-  sunlightColor: 0x93581d,
+  skyColor: 0x387977,
+  cloudColor: 0x324253,
+  cloudShadowColor: 0x404136,
+  sunColor: 0xcc3256,
+  sunGlareColor: 0xcaa443,
+  sunlightColor: 0x26d99f,
   speed: 1.0
 });
 

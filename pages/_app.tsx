@@ -1,15 +1,18 @@
+import Metadata from 'components/pages/MetaData';
+import StyledApp from 'components/pages/StyledApp';
+import { FileSystemProvider } from 'contexts/fileSystem';
+import { SessionProvider } from 'contexts/session';
 import type { AppProps } from 'next/app';
-import React from 'react';
-import StyledApp from '../components/pages/StyledApp';
-import MetaData from '../components/pages/MetaData';
-import { SessionProvider } from '../contexts/session';
 
 const App = ({ Component, pageProps }: AppProps): React.ReactElement => (
-  <SessionProvider>
-    <StyledApp>
-      <MetaData />
-      <Component {...pageProps} />
-    </StyledApp>
-  </SessionProvider>
+  <FileSystemProvider>
+    <SessionProvider>
+      <StyledApp>
+        <Metadata />
+        <Component {...pageProps} />
+      </StyledApp>
+    </SessionProvider>
+  </FileSystemProvider>
 );
+
 export default App;

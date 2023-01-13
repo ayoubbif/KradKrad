@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { MILLISECONDS_IN_SECOND } from 'utils/constants';
 
 const useSyncedClock = (callback: () => void): void => {
   useEffect(() => {
@@ -6,8 +7,8 @@ const useSyncedClock = (callback: () => void): void => {
 
     timeoutId = setTimeout(() => {
       callback();
-      timeoutId = setInterval(callback, 1000);
-    }, 1000 - new Date().getMilliseconds());
+      timeoutId = setInterval(callback, MILLISECONDS_IN_SECOND);
+    }, MILLISECONDS_IN_SECOND - new Date().getMilliseconds());
 
     return () => clearTimeout(timeoutId);
   }, [callback]);

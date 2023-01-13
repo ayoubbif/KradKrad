@@ -1,12 +1,15 @@
-import React from 'react';
-import StyledWindow from '../../styles/components/system/StyledWindow';
+import { useProcesses } from 'contexts/process';
+import StyledWindow from 'styles/components/system/StyledWindow';
+import { ProcessComponentProps } from './Processes/RenderProcess';
 
-interface WindowProps {
-  children: React.ReactNode;
-}
+const Window: React.FC<ProcessComponentProps> = ({ children, id }) => {
+  const {
+    processes: {
+      [id]: { minimized }
+    }
+  } = useProcesses();
 
-const Window: React.FC<WindowProps> = ({ children }) => (
-  <StyledWindow>{children}</StyledWindow>
-);
+  return <StyledWindow minimized={minimized}>{children}</StyledWindow>;
+};
 
 export default Window;

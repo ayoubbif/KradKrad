@@ -1,6 +1,6 @@
+import { WallpaperEffect } from 'styles/styled';
 import * as THREE from 'three';
 import CLOUDS from 'vanta/dist/vanta.clouds.min';
-import { WallpaperEffect } from '../types/styles/wallpaper';
 
 export type VantaCloudsSettings = {
   speed: number;

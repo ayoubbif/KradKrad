@@ -1,15 +1,17 @@
 import 'styled-components';
-import { WallpaperEffect } from '../types/styles/wallpaper';
+
+export type WallpaperEffect = (element: HTMLElement | null) => () => void;
 
 declare module 'styled-components' {
   export interface DefaultTheme {
     colors: {
       background: string;
-      clockText: string;
-      primary: string;
+      highlight: string;
       startButton: string;
       taskbar: string;
       window: string;
+      taskbarHover: string;
+      text: string;
     };
     formats: {
       date: Intl.DateTimeFormatOptions;
@@ -28,6 +30,8 @@ declare module 'styled-components' {
         blur: string;
         height: string;
         entry: {
+          borderSize: string;
+          fontSize: string;
           maxWidth: string;
         };
       };
