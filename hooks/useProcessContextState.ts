@@ -17,6 +17,7 @@ export type ProcessContextState = {
   maximize: (id: string) => void;
   minimize: (id: string) => void;
   mapProcesses: ProcessesMap;
+  processes: Processes;
 };
 
 const useProcessContextState = (): ProcessContextState => {
@@ -36,7 +37,7 @@ const useProcessContextState = (): ProcessContextState => {
     []
   );
 
-  return { close, open, maximize, minimize, mapProcesses };
+  return { close, open, maximize, minimize, mapProcesses, processes };
 };
 
 export default useProcessContextState;
