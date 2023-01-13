@@ -5,6 +5,8 @@ export type Process = {
   hasWindow?: boolean;
   icon: string;
   title: string;
+  maximize?: boolean;
+  minimize?: boolean;
 };
 
 export type Processes = {
