@@ -31,7 +31,7 @@ const formats = {
 const sizes = {
   clock: {
     fontSize: '14px',
-    width: '150px'
+    width: '95px'
   },
   startButton: {
     iconSize: '27px',

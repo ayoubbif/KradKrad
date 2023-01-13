@@ -12,7 +12,6 @@ export const getShortcut = (path: string, fs: FSModule): Promise<Shortcut> =>
       const { InternetShortcut = { URL: '', IconFile: '' } } = ini.parse(
         contents.toString()
       );
-
       resolve(InternetShortcut as Shortcut);
     });
   });

@@ -18,7 +18,15 @@ const FileEntry = ({ name, path }: FileEntryProps): JSX.Element => {
     <StyledFileEntry>
       <button type="button" onClick={onActivate} onKeyDown={onActivate}>
         <figure>
-          <Image src={icon} alt={name} width={20} height={20} />
+          {icon && (
+            <Image
+              src={icon}
+              alt={name}
+              width={33}
+              height={33}
+              loading="lazy"
+            />
+          )}
           <figcaption>{name}</figcaption>
         </figure>
       </button>

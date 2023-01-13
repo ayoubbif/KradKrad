@@ -20,9 +20,9 @@ const useFileInfo = (path: string): FileInfo => {
 
       if (extension === '.url') {
         getShortcut(path, fs).then(({ URL, IconFile }) => {
-          console.log(extension);
           setIcon(IconFile);
           setPid(URL);
+          console.log(URL, IconFile);
         });
       } else if (IMAGE_FILE_EXTENSIONS.includes(extension)) {
         setIcon(path);
