@@ -4,12 +4,12 @@ import vantaClouds from '../utils/vantaClouds';
 const colors = {
   background: '#000',
   borderColor: '#00e64d',
-  clockText: '#FFF',
+  clockText: '#000',
   primary: '#000',
-  startButton: '#FFF',
-  taskbar: 'rgba(0, 0, 0, 60%)',
-  window: '#CCCCCC',
-  opaqueWhite: 'rgba(255, 255, 255, 0.8)'
+  startButton: '#000',
+  taskbar: '#C3C3C3',
+  window: '#C3C3C3',
+  opaqueWhite: '#000'
 };
 
 const formats = {
@@ -29,7 +29,7 @@ const formats = {
 
 const sizes = {
   clock: {
-    fontSize: '12px',
+    fontSize: '13px',
     width: '76px'
   },
   startButton: {
