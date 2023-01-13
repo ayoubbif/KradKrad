@@ -5,7 +5,7 @@ const StyledDesktop = styled.main`
   height: 100vh;
   width: 100vw;
   overflow: hidden; // Prevents scrollbars from appearing
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 0;
   left: 0;

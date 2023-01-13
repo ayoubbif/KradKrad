@@ -6,7 +6,7 @@ const StyledTaskbarEntry = styled.li`
   border-bottom: ${({ theme }) =>
     `${theme.sizes.taskbar.entry.borderSize}
     solid
-    ${theme.colors.borderColor}`};
+    ${theme.colors.highlight}`};
   height: 100%;
   max-width: ${({ theme }) => theme.sizes.taskbar.entry.maxWidth};
   figure {

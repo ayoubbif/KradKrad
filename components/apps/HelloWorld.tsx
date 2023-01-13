@@ -1,3 +1,3 @@
-const HelloWorld = (): JSX.Element => <h1>Tanit OS</h1>;
+const HelloWorld = (): JSX.Element => <h1>Thinith OS</h1>;
 
 export default HelloWorld;

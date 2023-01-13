@@ -3,11 +3,12 @@ import vantaClouds from '../utils/vantaClouds';
 
 const colors = {
   background: '#000',
-  borderColor: '#00e64d',
+  highlight: '#000666',
   clockText: '#000',
   primary: '#000',
   startButton: '#000',
-  taskbar: '#C3C3C3',
+  taskbar: 'hsla(174, 16%, 55%, 0.69)',
+  taskbarHover: 'hsla(0, 37%, 67%, 1)',
   window: '#C3C3C3',
   opaqueWhite: '#000'
 };
@@ -29,16 +30,16 @@ const formats = {
 
 const sizes = {
   clock: {
-    fontSize: '13px',
-    width: '76px'
+    fontSize: '14px',
+    width: '150px'
   },
   startButton: {
-    iconSize: '21px',
-    width: '36px'
+    iconSize: '27px',
+    width: '45px'
   },
   taskbar: {
     blur: '7px',
-    height: '30px',
+    height: '50px',
     entry: {
       borderSize: '3px',
       fontSize: '12px',

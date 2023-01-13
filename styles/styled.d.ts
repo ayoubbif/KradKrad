@@ -5,12 +5,13 @@ declare module 'styled-components' {
   export interface DefaultTheme {
     colors: {
       background: string;
-      borderColor: string;
+      highlight: string;
       clockText: string;
       primary: string;
       startButton: string;
       taskbar: string;
       window: string;
+      taskbarHover: string;
       opaqueWhite: string;
     };
     formats: {

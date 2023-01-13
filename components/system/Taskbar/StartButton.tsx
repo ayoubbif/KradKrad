@@ -1,6 +1,6 @@
 import React from 'react';
 import StyledStartButton from '../../../styles/components/system/Taskbar/StyledStartButton';
-import { SiWindows95 } from 'react-icons/si';
+import { GiGreatPyramid } from 'react-icons/gi';
 import { ProcessConsumer } from '../../../contexts/process';
 
 const StartButton = () => (
@@ -10,7 +10,7 @@ const StartButton = () => (
         onClick={() => open('HelloWorld')}
         onDoubleClick={() => close('HelloWorld')}
       >
-        <SiWindows95 title="Start" />
+        <GiGreatPyramid title="Start" />
       </StyledStartButton>
     )}
   </ProcessConsumer>

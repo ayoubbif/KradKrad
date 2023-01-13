@@ -13,10 +13,12 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     font-family: 'JetBrains Mono', monospace;
+    user-select: none;
   }
 
   button{
     background-color: transparent;
+    font-family: inherit
   }
 
   ol{
