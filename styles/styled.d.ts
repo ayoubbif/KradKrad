@@ -7,13 +7,11 @@ declare module 'styled-components' {
     colors: {
       background: string;
       highlight: string;
-      clockText: string;
-      primary: string;
       startButton: string;
       taskbar: string;
       window: string;
       taskbarHover: string;
-      opaqueWhite: string;
+      text: string;
     };
     formats: {
       date: Intl.DateTimeFormatOptions;

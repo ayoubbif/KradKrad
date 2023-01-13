@@ -4,13 +4,11 @@ import vantaClouds from 'utils/vantaClouds';
 const colors = {
   background: '#000',
   highlight: '#000666',
-  clockText: '#000',
-  primary: '#000',
   startButton: '#000',
   taskbar: 'hsla(174, 16%, 55%, 0.69)',
   taskbarHover: 'hsla(0, 37%, 67%, 1)',
   window: '#C3C3C3',
-  opaqueWhite: '#000'
+  text: '#000'
 };
 
 const formats = {
