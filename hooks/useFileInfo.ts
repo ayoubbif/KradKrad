@@ -2,10 +2,7 @@ import { extname } from 'path';
 import { useEffect, useState } from 'react';
 import { useFileSystem } from '../contexts/fileSystem';
 import { IMAGE_FILE_EXTENSIONS } from '../utils/constants';
-import {
-  getProccessByFileExtension,
-  getShortcut
-} from '../utils/fileFunctions';
+import { getProcessByFileExtension, getShortcut } from '../utils/fileFunctions';
 
 type FileInfo = {
   icon: string;
@@ -18,9 +15,10 @@ const useFileInfo = (path: string): FileInfo => {
   const { fs } = useFileSystem();
 
   useEffect(() => {
+    console.log('extension');
     if (fs) {
       const extension = extname(path);
-
+      console.log('extension');
       if (extension === '.url') {
         getShortcut(path, fs).then(({ URL, IconFile }) => {
           setIcon(IconFile);
@@ -30,7 +28,7 @@ const useFileInfo = (path: string): FileInfo => {
         setIcon(path);
         setPid('ImageViewer');
       } else {
-        setPid(getProccessByFileExtension(extension));
+        setPid(getProcessByFileExtension(extension));
       }
     }
   }, [fs, path]);
