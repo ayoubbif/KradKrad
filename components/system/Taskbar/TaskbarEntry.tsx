@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { useCallback } from 'react';
 import StyledTaskbarEntry from 'styles/components/system/Taskbar/StyledTaskbarEntry';
 import Button from 'styles/generic/Button';
+import CustomImage from 'styles/generic/CustomImage';
 
 type TaskbarEntryProps = {
   icon: string;
@@ -16,10 +17,16 @@ const TaskbarEntry = ({ icon, id, title }: TaskbarEntryProps): JSX.Element => {
   return (
     <StyledTaskbarEntry>
       <Button onClick={onClick}>
-        <figure>
-          <Image src={icon} alt={title} width={19} height={19} />
+        <CustomImage>
+          <Image
+            src={icon}
+            alt={title}
+            width={19}
+            height={19}
+            draggable={false}
+          />
           <figcaption>{title}</figcaption>
-        </figure>
+        </CustomImage>
       </Button>
     </StyledTaskbarEntry>
   );
