@@ -5,8 +5,8 @@ const colors = {
   background: '#000',
   highlight: '#000666',
   startButton: '#000',
-  taskbar: 'hsla(174, 16%, 55%, 0.69)',
-  taskbarHover: 'hsla(0, 37%, 67%, 1)',
+  taskbar: 'hsla(65, 33%, 34%, 0.39)',
+  taskbarHover: 'hsla(0, 77%, 67%, 1)',
   window: '#C3C3C3',
   text: '#000'
 };
@@ -28,8 +28,8 @@ const formats = {
 
 const sizes = {
   clock: {
-    fontSize: '14px',
-    width: '95px'
+    fontSize: '15px',
+    width: '100px'
   },
   startButton: {
     iconSize: '27px',
@@ -39,15 +39,15 @@ const sizes = {
     blur: '7px',
     height: '50px',
     entry: {
-      borderSize: '3px',
-      fontSize: '12px',
+      borderSize: '5px',
+      fontSize: '13px',
       maxWidth: '161px'
     }
   }
 };
 
 const wallpaper = vantaClouds({
-  skyColor: 0x387977,
+  skyColor: 0xfad977,
   cloudColor: 0x324253,
   cloudShadowColor: 0x404136,
   sunColor: 0xcc3256,

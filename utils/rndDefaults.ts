@@ -1,4 +1,5 @@
 import type { HandleStyles } from 'react-rnd';
+import { CSSProperties } from 'styled-components';
 
 const rndDefaults = {
   bounds: 'main',
@@ -54,7 +55,10 @@ const rndDefaults = {
       top: '-3px',
       width: '12px'
     }
-  } as HandleStyles
+  } as HandleStyles,
+  style: <CSSProperties>{
+    zIndex: 1
+  }
 };
 
 export default rndDefaults;
