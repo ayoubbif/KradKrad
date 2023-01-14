@@ -1,33 +1,21 @@
-import type { RndResizeCallback, Position, Props } from 'react-rnd';
-import { useCallback, useMemo, useState } from 'react';
-import { useTheme } from 'styled-components';
+import type { RndResizeCallback, Props } from 'react-rnd';
+import { useCallback } from 'react';
 import { DraggableEventHandler } from 'react-draggable';
-import { DEFAULT_WINDOW_POSITION, DEFAULT_WINDOW_SIZE } from 'utils/constants';
+import useResizable from './useResizable';
+import useDraggable from './useDraggable';
+import rndDefaults from 'utils/rndDefaults';
 
-export type Size = NonNullable<Props['size']>;
+const useRnd = (maximized = false): Props => {
+  const [size, setSize] = useResizable(maximized);
+  const [position, setPosition] = useDraggable(maximized);
 
-type Resizable = Size & {
-  updateSize: RndResizeCallback;
-};
-
-type Draggable = Position & {
-  updatePosition: DraggableEventHandler;
-};
-
-type ResizableAndDraggable = Resizable & Draggable;
-
-const useResizableAndDraggable = (maximized = false): ResizableAndDraggable => {
-  const { sizes } = useTheme();
-  const [{ height, width }, setSize] = useState<Size>(DEFAULT_WINDOW_SIZE);
-  const [{ x, y }, setPosition] = useState<Position>(DEFAULT_WINDOW_POSITION);
-
-  const updatePosition = useCallback<DraggableEventHandler>(
+  const onDragStop = useCallback<DraggableEventHandler>(
     (_event, { x: positionX, y: positionY }) =>
       setPosition({ x: positionX, y: positionY }),
-    []
+    [setPosition]
   );
 
-  const updateSize = useCallback<RndResizeCallback>(
+  const onResizeStop = useCallback<RndResizeCallback>(
     (
       _event,
       _direction,
@@ -38,22 +26,18 @@ const useResizableAndDraggable = (maximized = false): ResizableAndDraggable => {
       setSize({ height: elementHeight, width: elementWidth });
       setPosition({ x: positionX, y: positionY });
     },
-    []
-  );
-
-  const taskbarHeight = useMemo(
-    () => Number(sizes.taskbar.height.replace('px', '')),
-    [sizes.taskbar.height]
+    [setPosition, setSize]
   );
 
   return {
-    x: maximized ? 0 : x,
-    y: maximized ? 0 : y,
-    updatePosition,
-    height: maximized ? `${window.innerHeight - taskbarHeight}px` : height, //Substract taskbar height
-    width: maximized ? '100%' : width,
-    updateSize
+    disableDragging: maximized,
+    enableResizing: !maximized,
+    position,
+    size,
+    onDragStop,
+    onResizeStop,
+    ...rndDefaults
   };
 };
 
-export default useResizableAndDraggable;
+export default useRnd;

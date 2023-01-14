@@ -1,4 +1,4 @@
-import { Size } from 'hooks/useRnd';
+import { Size } from 'hooks/useResizable';
 import { Position } from 'react-rnd';
 
 export const DEFAULT_WINDOW_SIZE: Size = {
