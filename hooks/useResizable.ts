@@ -11,8 +11,8 @@ type Resizable = Size & {
 };
 
 const defaultWindowSize = {
-  height: '500px',
-  width: '750px'
+  height: '200px',
+  width: '250px'
 };
 
 const useResizable = (maximized = false): Resizable => {

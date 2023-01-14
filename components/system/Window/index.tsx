@@ -5,6 +5,7 @@ import TitleBar from './TitleBar';
 import { Rnd } from 'react-rnd';
 import useResizable from 'hooks/useResizable';
 import rndDefaults from 'utils/rndDefaults';
+import useDraggable from 'hooks/useDraggable';
 
 const Window: React.FC<ProcessComponentProps> = ({ children, id }) => {
   const {
@@ -14,12 +15,16 @@ const Window: React.FC<ProcessComponentProps> = ({ children, id }) => {
   } = useProcesses();
 
   const { height, width, updateSize } = useResizable(maximized);
+  const { x, y, updatePosition } = useDraggable(maximized);
 
   return (
     <Rnd
+      disableDragging={maximized}
       enableResizing={!maximized}
       size={{ height, width }}
-      onResizeStop={updateSize}
+      onDrag={updatePosition}
+      onResize={updateSize}
+      position={{ x, y }}
       {...rndDefaults}
     >
       <StyledWindow minimized={minimized}>

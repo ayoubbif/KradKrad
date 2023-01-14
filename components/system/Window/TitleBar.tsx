@@ -24,14 +24,14 @@ const TitleBar = ({ id }: TitleBarProps): JSX.Element => {
   const onClose = useCallback(() => close(id), [id, close]);
 
   return (
-    <StyledTitleBar>
+    <StyledTitleBar className="handle">
       <h1>
         <figure>
-          <Image src={icon} alt={title} height={19} width={19} />
+          <Image src={icon} alt={title} height={16} width={16} />
           <figcaption>{title}</figcaption>
         </figure>
       </h1>
-      <nav>
+      <nav className="cancel">
         <Button onClick={onMaximize}>
           <MaximizeIcon />
         </Button>
