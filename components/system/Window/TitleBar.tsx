@@ -27,13 +27,13 @@ const TitleBar = ({ id }: TitleBarProps): JSX.Element => {
         </figure>
       </h1>
       <nav className="cancel">
-        <Button onClick={onMaximize}>
+        <Button className="maximize" onClick={onMaximize}>
           <MaximizeIcon />
         </Button>
-        <Button onClick={onMinimize}>
+        <Button className="minimize" onClick={onMinimize}>
           <MinimizeIcon />
         </Button>
-        <Button onClick={onClose}>
+        <Button className="close" onClick={onClose}>
           <CloseIcon />
         </Button>
       </nav>

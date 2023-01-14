@@ -5,8 +5,8 @@ const colors = {
   background: '#000',
   highlight: '#000666',
   startButton: '#000',
-  taskbar: 'hsla(65, 33%, 34%, 0.39)',
-  taskbarHover: 'hsla(0, 77%, 67%, 1)',
+  taskbar: 'hsla(111, 30%, 69%, 0.6)',
+  taskbarHover: 'hsla(0, 69%, 69%, 0.9)',
   window: '#C3C3C3',
   text: '#000'
 };
