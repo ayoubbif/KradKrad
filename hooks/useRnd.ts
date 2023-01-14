@@ -1,5 +1,5 @@
 import type { RndResizeCallback, Position } from 'react-rnd';
-import { useCallback, useState } from 'react';
+import { useCallback, useMemo, useState } from 'react';
 import { useTheme } from 'styled-components';
 import { DraggableEventHandler } from 'react-draggable';
 
@@ -53,11 +53,16 @@ const useResizableAndDraggable = (maximized = false): ResizableAndDraggable => {
     []
   );
 
+  const taskbarHeight = useMemo(
+    () => Number(sizes.taskbar.height.replace('px', '')),
+    [sizes.taskbar.height]
+  );
+
   return {
     x: maximized ? 0 : x,
     y: maximized ? 0 : y,
     updatePosition,
-    height: maximized ? `calc(100% - ${sizes.taskbar.height})` : height, //Substract taskbar height
+    height: maximized ? `${window.innerHeight - taskbarHeight}px` : height, //Substract taskbar height
     width: maximized ? '100%' : width,
     updateSize
   };

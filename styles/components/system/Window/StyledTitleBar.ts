@@ -41,12 +41,12 @@ const StyledTitleBar = styled.header`
           background-color: #cc0000;
           transition: background-color 0.2s ease;
         }
-        &.minimize {
-          background-color: #ff6600;
-          transition: background-color 0.2s ease;
-        }
         &.maximize {
           background-color: #006600;
+          transition: background-color 0.2s ease;
+        }
+        &.minimize {
+          background-color: #ff6600;
           transition: background-color 0.2s ease;
         }
       }

@@ -9,6 +9,7 @@ const StyledTaskbar = styled.nav`
   right: 0;
   height: ${({ theme }) => theme.sizes.taskbar.height};
   width: 100vw;
+  z-index: 2;
 `;
 
 export default StyledTaskbar;
