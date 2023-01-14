@@ -32,6 +32,7 @@ const useResizableAndDraggable = (maximized = false): ResizableAndDraggable => {
   const { sizes } = useTheme();
   const [{ height, width }, setSize] = useState<Size>(defaultWindowSize);
   const [{ x, y }, setPosition] = useState<Position>(defaultWindowPosition);
+
   const updatePosition = useCallback<DraggableEventHandler>(
     (_event, { x: positionX, y: positionY }) =>
       setPosition({ x: positionX, y: positionY }),
