@@ -33,7 +33,6 @@ const TitleBar = ({ id }: TitleBarProps): JSX.Element => {
         <Button className="maximize" onClick={onMaximize}>
           <MaximizeIcon />
         </Button>
-
         <Button className="close" onClick={onClose}>
           <CloseIcon />
         </Button>

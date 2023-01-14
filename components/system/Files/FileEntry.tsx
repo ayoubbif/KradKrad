@@ -27,7 +27,6 @@ const FileEntry = ({ name, path }: FileEntryProps): JSX.Element => {
               alt={name}
               width={33}
               height={33}
-              loading="lazy"
               draggable={false}
             />
           )}

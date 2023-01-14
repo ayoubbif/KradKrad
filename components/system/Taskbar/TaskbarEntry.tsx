@@ -10,6 +10,7 @@ type TaskbarEntryProps = {
   id: string;
   title: string;
 };
+
 const TaskbarEntry = ({ icon, id, title }: TaskbarEntryProps): JSX.Element => {
   const { minimize } = useProcesses();
   const onClick = useCallback(() => minimize(id), [id, minimize]);
