@@ -6,7 +6,11 @@ import { Rnd } from 'react-rnd';
 import rndDefaults from 'utils/rndDefaults';
 import useResizableAndDraggable from 'hooks/useRnd';
 
-const Window: React.FC<ProcessComponentProps> = ({ children, id }) => {
+type WindpwProps = ProcessComponentProps & {
+  children: React.ReactNode;
+};
+
+const Window = ({ children, id }: WindpwProps): JSX.Element => {
   const {
     processes: {
       [id]: { maximized, minimized }

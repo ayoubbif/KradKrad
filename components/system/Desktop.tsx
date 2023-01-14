@@ -5,7 +5,7 @@ interface DesktopProps {
   children: React.ReactNode;
 }
 
-const Desktop: React.FC<DesktopProps> = ({ children }) => {
+const Desktop = ({ children }: DesktopProps): JSX.Element => {
   const desktopRef = useRef<HTMLElement | null>(null);
 
   useWallpaper(desktopRef);
