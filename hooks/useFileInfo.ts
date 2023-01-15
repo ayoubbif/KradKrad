@@ -22,7 +22,6 @@ const useFileInfo = (path: string): FileInfo => {
         getShortcut(path, fs).then(({ URL, IconFile }) => {
           setIcon(IconFile);
           setPid(URL);
-          console.log(URL, IconFile);
         });
       } else if (IMAGE_FILE_EXTENSIONS.includes(extension)) {
         setIcon(path);
@@ -37,3 +36,4 @@ const useFileInfo = (path: string): FileInfo => {
 };
 
 export default useFileInfo;
+

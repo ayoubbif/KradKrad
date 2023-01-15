@@ -5,6 +5,7 @@ import Image from 'next/image';
 import StyledFileEntry from 'styles/components/system/Files/StyledFileEntry';
 import Button from 'styles/generic/Button';
 import useDoubleClick from 'hooks/useDoubleClick';
+import CustomImage from 'styles/generic/CustomImage';
 
 type FileEntryProps = {
   name: string;
@@ -19,18 +20,18 @@ const FileEntry = ({ name, path }: FileEntryProps): JSX.Element => {
   return (
     <StyledFileEntry>
       <Button onClick={useDoubleClick(onClick)}>
-        <figure>
+        <CustomImage>
           {icon && (
             <Image
               src={icon}
               alt={name}
               width={33}
               height={33}
-              loading="lazy"
+              draggable={false}
             />
           )}
           <figcaption>{name}</figcaption>
-        </figure>
+        </CustomImage>
       </Button>
     </StyledFileEntry>
   );

@@ -8,7 +8,7 @@ interface StyledAppProps {
   children: React.ReactNode;
 }
 
-const StyledApp: React.FC<StyledAppProps> = ({ children }) => (
+const StyledApp = ({ children }: StyledAppProps): JSX.Element => (
   <SessionConsumer>
     {({ themeName }) => (
       <ThemeProvider theme={themes[themeName] || themes.defaultTheme}>

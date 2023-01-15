@@ -14,11 +14,11 @@ const StyledStartButton = styled(Button)`
   width: ${({ theme }) => theme.sizes.startButton.width};
 
   svg {
-    height: 30px;
+    height: ${({ theme }) => theme.sizes.startButton.iconSize};
   }
 
   &:hover {
-    background-color: ${({ theme }) => theme.colors.taskbarHover};
+    background-color: ${({ theme }) => theme.colors.taskbar.hover};
 
     svg {
       fill: ${({ theme }) => theme.colors.highlight};
