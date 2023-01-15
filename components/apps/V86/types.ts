@@ -4,11 +4,6 @@ export type EventCallback = (data: number[]) => void;
 
 type EventListener = (event: string, callback: EventCallback) => void;
 
-export type V86 = {
-  emulator: V86Starter | null;
-  lockMouse: () => void;
-};
-
 export type V86Starter = {
   add_listener: EventListener;
   destroy: () => void;
@@ -16,10 +11,15 @@ export type V86Starter = {
   remove_listener: EventListener;
 };
 
+export type V86 = {
+  emulator: V86Starter | null;
+  lockMouse: () => void;
+};
+
 type V86Config = typeof v86Config & {
-  boot_order: number;
   memory_size: number;
   vga_memory_size: number;
+  boot_order: number;
   cdrom?: {
     url?: string;
   };

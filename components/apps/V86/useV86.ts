@@ -4,14 +4,14 @@ import {
   config as v86Config
 } from 'components/apps/V86/config';
 import type {
-  WindowWithV86Starter,
   NavigatorWithMemory,
   V86,
-  V86Starter
+  V86Starter,
+  WindowWithV86Starter
 } from 'components/apps/V86/types';
 import { useFileSystem } from 'contexts/fileSystem';
 import { extname } from 'path';
-import { useEffect, useState, useCallback } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { bufferToUrl, loadScript } from 'utils/fileFunctions';
 
 const useV86 = (
@@ -25,9 +25,8 @@ const useV86 = (
   useEffect(() => {
     if (!emulator) {
       fs?.readFile(url, (_error, contents = Buffer.from('')) => {
-        loadScript('/libs/v86/v86.js', () => {
-          const extension = extname(url).toLowerCase();
-          const isISO = extension === '.iso';
+        loadScript('/libs/v86/libv86.js', () => {
+          const isISO = extname(url).toLowerCase() === '.iso';
           const { deviceMemory = 8 } = navigator as NavigatorWithMemory;
           const memoryRatio = deviceMemory / 8;
 
@@ -46,9 +45,12 @@ const useV86 = (
     }
 
     return () => emulator?.destroy?.();
-  }, [emulator, screenContainer, fs, url]);
+  }, [emulator, fs, screenContainer, url]);
 
-  return { emulator, lockMouse };
+  return {
+    emulator,
+    lockMouse
+  };
 };
 
 export default useV86;

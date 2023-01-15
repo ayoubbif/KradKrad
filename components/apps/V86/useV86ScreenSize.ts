@@ -1,7 +1,7 @@
 import type { EventCallback, V86Starter } from 'components/apps/V86/types';
-import type { CSSProperties } from 'styled-components';
-import { useEffect, useCallback } from 'react';
 import { useSession } from 'contexts/session';
+import { useCallback, useEffect } from 'react';
+import type { CSSProperties } from 'styled-components';
 import { useTheme } from 'styled-components';
 import { pxToNumber } from 'utils/stringFunctions';
 
@@ -12,7 +12,7 @@ const BORDER_OFFSET = 3;
 
 const useV86ScreenSize = (
   id: string,
-  emulator?: V86Starter | null
+  emulator: V86Starter | null
 ): CSSProperties => {
   const { setWindowStates } = useSession();
   const {
@@ -35,7 +35,7 @@ const useV86ScreenSize = (
 
   const setScreenGfx = useCallback<EventCallback>(
     ([width, height]) =>
-      updateWindowSize(height, pxToNumber(titlebar.height) + width),
+      updateWindowSize(height + pxToNumber(titlebar.height), width),
     [titlebar.height, updateWindowSize]
   );
 
@@ -51,20 +51,20 @@ const useV86ScreenSize = (
   );
 
   useEffect(() => {
-    emulator?.add_listener(SET_SCREEN_GFX, setScreenGfx);
-    emulator?.add_listener(SET_SCREEN_TXT, setScreenText);
+    emulator?.add_listener?.(SET_SCREEN_GFX, setScreenGfx);
+    emulator?.add_listener?.(SET_SCREEN_TXT, setScreenText);
 
     return () => {
-      emulator?.remove_listener(SET_SCREEN_GFX, setScreenGfx);
-      emulator?.remove_listener(SET_SCREEN_TXT, setScreenText);
+      emulator?.remove_listener?.(SET_SCREEN_GFX, setScreenGfx);
+      emulator?.remove_listener?.(SET_SCREEN_TXT, setScreenText);
     };
   }, [emulator, setScreenGfx, setScreenText]);
 
   return {
     font: `${lineHeight} monospace`,
     lineHeight,
-    top: BORDER_OFFSET - 1,
-    position: 'relative'
+    position: 'relative',
+    top: BORDER_OFFSET - 1
   };
 };
 

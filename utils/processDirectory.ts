@@ -19,11 +19,11 @@ export type Processes = {
 
 const processDirectory: Processes = {
   Computer: {
+    autoSizing: false,
     Component: dynamic(() => import('components/apps/Computer')),
     hasWindow: true,
     icon: '/computer.ico',
-    title: 'Computer',
-    autoSizing: false
+    title: 'Computer'
   },
   V86: {
     autoSizing: true,

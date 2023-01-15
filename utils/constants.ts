@@ -2,8 +2,8 @@ import { Size } from 'hooks/useResizable';
 import { Position } from 'react-rnd';
 
 export const DEFAULT_WINDOW_SIZE: Size = {
-  height: '200px',
-  width: '250px'
+  height: '260px',
+  width: '400px'
 };
 
 export const DEFAULT_WINDOW_POSITION: Position = {
