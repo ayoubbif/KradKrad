@@ -5,10 +5,11 @@ type StyledWindowProps = {
 };
 
 const StyledWindow = styled.section<StyledWindowProps>`
-  background-color: ${({ theme }) => theme.colors.window};
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+  background-color: ${({ theme }) => theme.colors.window.background};
+  box-shadow: ${({ theme }) => theme.colors.window.shadow};
   display: ${({ minimized = false }) => (minimized ? 'none' : 'block')};
-  outline: 2px solid;
+  outline: ${({ theme }) => theme.colors.window.outline};
+  overflow: hidden;
   position: absolute;
   width: 100%;
   height: 100%;

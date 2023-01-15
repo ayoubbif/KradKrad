@@ -3,8 +3,15 @@ const sizes = {
     fontSize: '15px',
     width: '100px'
   },
+  fileManager: {
+    columnGap: '1px',
+    gridEntryHeight: '80px',
+    gridEntryWidth: '80px',
+    rowGap: '5px 0',
+    padding: '10px'
+  },
   startButton: {
-    iconSize: '27px',
+    iconSize: '30px',
     width: '45px'
   },
   taskbar: {

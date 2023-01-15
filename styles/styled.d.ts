@@ -12,12 +12,16 @@ declare module 'styled-components' {
         background: string;
         hover: string;
       };
-      window: string;
       taskbarHover: string;
       text: string;
       titlebar: {
         background: string;
         text: string;
+      };
+      window: {
+        background: string;
+        outline: string;
+        shadow: string;
       };
     };
     formats: {
@@ -28,6 +32,13 @@ declare module 'styled-components' {
       clock: {
         fontSize: string;
         width: string;
+      };
+      fileManager: {
+        columnGap: string;
+        gridEntryHeight: string;
+        gridEntryWidth: string;
+        rowGap: string;
+        padding: string;
       };
       startButton: {
         iconSize: string;
