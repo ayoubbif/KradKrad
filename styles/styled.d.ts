@@ -70,6 +70,11 @@ declare module 'styled-components' {
         iconMargin: string;
         iconSize: string;
       };
+
+      window: {
+        lineHeight: string;
+        outline: string;
+      };
     };
     wallpaper?: WallpaperEffect;
   }

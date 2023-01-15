@@ -2,6 +2,7 @@ import { ProcessComponentProps } from 'components/system/Processes/RenderProcess
 import dynamic from 'next/dynamic';
 
 export type Process = {
+  backgroundColor?: string;
   Component: React.ComponentType<ProcessComponentProps>;
   hasWindow?: boolean;
   icon: string;
@@ -20,9 +21,17 @@ const processDirectory: Processes = {
   Computer: {
     Component: dynamic(() => import('components/apps/Computer')),
     hasWindow: true,
-    icon: '/computer.png',
+    icon: '/computer.ico',
     title: 'Computer',
     autoSizing: false
+  },
+  V86: {
+    autoSizing: true,
+    backgroundColor: '#000',
+    Component: dynamic(() => import('components/apps/V86')),
+    hasWindow: true,
+    icon: '/icons/linux.ico',
+    title: 'Linux'
   }
 };
 

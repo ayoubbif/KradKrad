@@ -32,9 +32,13 @@ const sizes = {
     buttonIconWidth: '20px',
     buttonWidth: '45px',
     fontSize: '13px',
-    height: '44px',
+    height: '30px',
     iconMargin: '0 5px',
-    iconSize: '20px'
+    iconSize: '18px'
+  },
+  window: {
+    lineHeight: '14px',
+    outline: '1px'
   }
 };
 
