@@ -15,6 +15,14 @@ const sizes = {
       fontSize: '13px',
       maxWidth: '161px'
     }
+  },
+  titlebar: {
+    buttonIconWidth: '20px',
+    buttonWidth: '45px',
+    fontSize: '13px',
+    height: '44px',
+    iconMargin: '0 5px',
+    iconSize: '20px'
   }
 };
 

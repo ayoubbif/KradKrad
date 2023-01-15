@@ -1,26 +1,34 @@
 import styled from 'styled-components';
 
 const StyledTitleBar = styled.header`
-  background-color: #666ace;
+  background-color: ${({ theme }) => theme.colors.titlebar.background};
+  border-bottom: 1px solid #000;
   display: flex;
+  height: ${({ theme }) => theme.sizes.titlebar.height};
   h1 {
-    color: #000;
+    color: ${({ theme }) => theme.colors.titlebar.text};
     display: flex;
     flex-grow: 1;
-    font-size: 13px;
-    font-weight: bold;
-    height: 30px;
+    font-size: ${({ theme }) => theme.sizes.titlebar.fontSize};
+    font-weight: 400;
+    min-width: 0;
 
     figure {
       display: flex;
       align-items: center;
-      margin: 3px;
+      min-width: inherit;
 
       img {
-        height: 23px;
-        margin: 0 8px;
-        width: 23px;
+        height: ${({ theme }) => theme.sizes.titlebar.iconSize};
+        margin: ${({ theme }) => theme.sizes.titlebar.iconMargin};
+        width: ${({ theme }) => theme.sizes.titlebar.iconSize};
       }
+    }
+
+    figcaption {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
   }
 
@@ -28,12 +36,24 @@ const StyledTitleBar = styled.header`
     display: flex;
 
     button {
-      width: 45px;
+      border-left: 1px solid #000;
+      box-sizing: content-box;
+      display: flex;
+      place-content: center;
+      place-items: center;
+      width: ${({ theme }) => theme.sizes.titlebar.buttonWidth};
 
       svg {
         fill: #d1c4cd;
         stroke: #000;
-        width: 25px;
+        width: ${({ theme }) => theme.sizes.titlebar.iconSize};
+      }
+
+      &.close,
+      &.maximize {
+        svg {
+          margin-right: 1px;
+        }
       }
 
       &:hover {
@@ -42,11 +62,11 @@ const StyledTitleBar = styled.header`
           transition: background-color 0.2s ease;
         }
         &.maximize {
-          background-color: #006600;
+          background-color: #00cc00;
           transition: background-color 0.2s ease;
         }
         &.minimize {
-          background-color: #ff6600;
+          background-color: #0000cc;
           transition: background-color 0.2s ease;
         }
       }

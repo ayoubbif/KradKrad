@@ -22,7 +22,13 @@ const TitleBar = ({ id }: TitleBarProps): JSX.Element => {
     <StyledTitleBar className="handle">
       <h1>
         <figure>
-          <Image src={icon} alt={title} height={16} width={16} />
+          <Image
+            src={icon}
+            alt={title}
+            height={16}
+            width={16}
+            draggable={false}
+          />
           <figcaption>{title}</figcaption>
         </figure>
       </h1>

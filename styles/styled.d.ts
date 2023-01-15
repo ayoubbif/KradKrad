@@ -12,6 +12,10 @@ declare module 'styled-components' {
       window: string;
       taskbarHover: string;
       text: string;
+      titlebar: {
+        background: string;
+        text: string;
+      };
     };
     formats: {
       date: Intl.DateTimeFormatOptions;
@@ -34,6 +38,14 @@ declare module 'styled-components' {
           fontSize: string;
           maxWidth: string;
         };
+      };
+      titlebar: {
+        buttonIconWidth: string;
+        buttonWidth: string;
+        fontSize: string;
+        height: string;
+        iconMargin: string;
+        iconSize: string;
       };
     };
     wallpaper?: WallpaperEffect;

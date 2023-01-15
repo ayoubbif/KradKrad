@@ -6,6 +6,8 @@ const rndDefaults = {
   cancel: '.cancel',
   dragHandleClassName: 'handle',
   enableUserSelectHack: false,
+  minHeight: '165px',
+  minWidth: '165px',
   resizeHandleStyles: {
     bottom: {
       bottom: '-3px',
