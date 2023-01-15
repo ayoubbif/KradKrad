@@ -8,6 +8,8 @@ export type Process = {
   title: string;
   maximized?: boolean;
   minimized?: boolean;
+  autoSizing?: boolean;
+  url?: string;
 };
 
 export type Processes = {
@@ -19,7 +21,8 @@ const processDirectory: Processes = {
     Component: dynamic(() => import('components/apps/Computer')),
     hasWindow: true,
     icon: '/computer.png',
-    title: 'Computer'
+    title: 'Computer',
+    autoSizing: false
   }
 };
 

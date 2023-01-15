@@ -13,7 +13,7 @@ type ProcessesMap = (
 
 export type ProcessContextState = {
   close: (id: string) => void;
-  open: (id: string) => void;
+  open: (id: string, url: string) => void;
   maximize: (id: string) => void;
   minimize: (id: string) => void;
   mapProcesses: ProcessesMap;
@@ -27,7 +27,10 @@ const useProcessContextState = (): ProcessContextState => {
     [processes]
   );
   const close = useCallback((id: string) => setProcesses(closeProcess(id)), []);
-  const open = useCallback((id: string) => setProcesses(openProcess(id)), []);
+  const open = useCallback(
+    (id: string, url: string) => setProcesses(openProcess(id, url)),
+    []
+  );
   const maximize = useCallback(
     (id: string) => setProcesses(maximizeProcess(id)),
     []
