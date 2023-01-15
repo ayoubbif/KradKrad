@@ -7,12 +7,17 @@ declare module 'styled-components' {
     colors: {
       background: string;
       highlight: string;
+      fileEntry: {
+        background: string;
+        border: string;
+        text: string;
+        textShadow: string;
+      };
       startButton: string;
       taskbar: {
         background: string;
         hover: string;
       };
-      taskbarHover: string;
       text: string;
       titlebar: {
         background: string;
@@ -33,11 +38,15 @@ declare module 'styled-components' {
         fontSize: string;
         width: string;
       };
+      fileEntry: {
+        fontSize: string;
+        iconSize: string;
+        letterSpacing: string;
+      };
       fileManager: {
         columnGap: string;
         gridEntryHeight: string;
         gridEntryWidth: string;
-        rowGap: string;
         padding: string;
       };
       startButton: {

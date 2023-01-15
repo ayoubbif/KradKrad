@@ -11,7 +11,6 @@ const StyledFileManager = styled.ol`
     `repeat(auto-fill, ${theme.sizes.fileManager.gridEntryHeight})`};
   height: ${({ theme }) => `calc(100% - ${theme.sizes.taskbar.height})`};
   padding: ${({ theme }) => theme.sizes.fileManager.padding};
-  row-gap: ${({ theme }) => theme.sizes.fileManager.rowGap};
 `;
 
 export default StyledFileManager;

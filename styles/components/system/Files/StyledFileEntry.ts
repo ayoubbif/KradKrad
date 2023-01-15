@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 
 const StyledFileEntry = styled.li`
-  padding: 5px;
+  padding: 2px;
   display: flex;
-  justify-content: center;
 
   &:hover {
-    background-color: hsla(10, 0%, 100%, 0.5);
-    border: 2px solid hsla(10, 0%, 100%, 0.5);
+    background-color: ${({ theme }) => theme.colors.fileEntry.background};
+    border: ${({ theme }) => theme.colors.fileEntry.border};
+    letter-spacing: ${({ theme }) => theme.sizes.fileEntry.letterSpacing};
     padding: 0;
     position: relative;
 
@@ -24,14 +24,13 @@ const StyledFileEntry = styled.li`
   button {
     figcaption {
       color: #000;
-      font-size: 14px;
-      text-shadow: 0 0 1px rgba(99, 88, 77, 0.75), 0 0 2px rgba(66, 55, 44, 0.5),
-        0 0 3px rgba(33, 22, 11, 0.25), 0 0 4px rgba(00, 255, 25, 0.1);
+      font-size: ${({ theme }) => theme.sizes.fileEntry.fontSize};
+      text-shadow: ${({ theme }) => theme.colors.fileEntry.textShadow};
     }
 
     img {
-      height: 55px;
-      width: 55px;
+      height: ${({ theme }) => theme.sizes.fileEntry.iconSize};
+      width: ${({ theme }) => theme.sizes.fileEntry.iconSize};
     }
   }
 `;

@@ -3,12 +3,17 @@ const sizes = {
     fontSize: '15px',
     width: '100px'
   },
+  fileEntry: {
+    fontSize: '14px',
+    iconSize: '50px',
+    letterSpacing: '0.6px'
+  },
+
   fileManager: {
     columnGap: '1px',
     gridEntryHeight: '80px',
     gridEntryWidth: '80px',
-    rowGap: '5px 0',
-    padding: '10px'
+    padding: '15px'
   },
   startButton: {
     iconSize: '30px',
