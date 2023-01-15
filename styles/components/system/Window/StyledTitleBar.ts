@@ -58,16 +58,22 @@ const StyledTitleBar = styled.header`
 
       &:hover {
         &.close {
-          background-color: #cc0000;
+          background-color: #880000;
           transition: background-color 0.2s ease;
         }
         &.maximize {
-          background-color: #00cc00;
+          background-color: #008800;
           transition: background-color 0.2s ease;
         }
         &.minimize {
-          background-color: #0000cc;
+          background-color: #000088;
           transition: background-color 0.2s ease;
+        }
+      }
+
+      &:disabled {
+        svg {
+          fill: #acc285;
         }
       }
     }

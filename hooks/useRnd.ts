@@ -5,14 +5,20 @@ import useResizable from './useResizable';
 import useDraggable from './useDraggable';
 import rndDefaults from 'utils/rndDefaults';
 import { useSession } from 'contexts/session';
+import { useProcesses } from 'contexts/process';
 
 const useRnd = (id: string, maximized = false): Props => {
   const {
+    processes: {
+      [id]: { autoSizing }
+    }
+  } = useProcesses();
+  const {
     windowStates: { [id]: windowState }
   } = useSession();
-  const { position: previousPosition, size: previousSize } = windowState || {};
-  const [position, setPosition] = useDraggable(maximized, previousPosition);
-  const [size, setSize] = useResizable(maximized, previousSize);
+  const { position: statePosition, size: stateSize } = windowState || {};
+  const [position, setPosition] = useDraggable(maximized, statePosition);
+  const [size, setSize] = useResizable(maximized, autoSizing, stateSize);
 
   const onDragStop = useCallback<DraggableEventHandler>(
     (_event, { x: positionX, y: positionY }) =>
@@ -36,7 +42,7 @@ const useRnd = (id: string, maximized = false): Props => {
 
   return {
     disableDragging: maximized,
-    enableResizing: !maximized,
+    enableResizing: !maximized && !autoSizing,
     position,
     size,
     onDragStop,
