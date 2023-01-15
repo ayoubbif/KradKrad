@@ -6,11 +6,7 @@ import { StartButtonIcon } from '../Icons';
 const StartButton = () => (
   <ProcessConsumer>
     {({ close, open }) => (
-      <StyledStartButton
-        onClick={() => open('Computer')}
-        onDoubleClick={() => close('Computer')}
-        title="Start"
-      >
+      <StyledStartButton title="Start">
         <StartButtonIcon />
       </StyledStartButton>
     )}

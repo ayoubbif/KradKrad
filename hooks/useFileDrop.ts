@@ -21,7 +21,11 @@ const useFileDrop = (directory: string, getFiles: () => void): FileDrop => {
       const reader = new FileReader();
 
       reader.onload = ({ target }) =>
-        fs?.writeFile(`${directory}/${file.name}`, target?.result, getFiles);
+        fs?.writeFile(
+          `${directory}/${file.name}`,
+          Buffer.from(new Uint8Array(target?.result as ArrayBuffer)),
+          getFiles
+        );
 
       reader.readAsArrayBuffer(file);
     },
