@@ -30,7 +30,7 @@ const processDirectory: Processes = {
     backgroundColor: '#000',
     Component: dynamic(() => import('components/apps/V86')),
     hasWindow: true,
-    icon: '/icons/linux.ico',
+    icon: '/icons/linux.png',
     title: 'Linux'
   }
 };
