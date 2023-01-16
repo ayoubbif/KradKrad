@@ -38,7 +38,7 @@ const sizes = {
     fontSize: '13px',
     height: '30px',
     iconMargin: '0 5px',
-    iconSize: '18px'
+    iconSize: '19px'
   },
   window: {
     lineHeight: '14px',

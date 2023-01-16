@@ -21,8 +21,8 @@ const colors = {
   },
   text: '#000',
   titlebar: {
-    background: '#000',
-    text: '#fff'
+    background: '#eee',
+    text: '#000'
   },
   window: {
     background: '#ace9be',

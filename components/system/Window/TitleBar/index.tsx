@@ -1,7 +1,12 @@
 import Image from 'next/image';
 import { useProcesses } from 'contexts/process';
 import Button from 'styles/generic/Button';
-import { CloseIcon, MaximizeIcon, MinimizeIcon } from '../../Icons';
+import {
+  CloseIcon,
+  MaximizeIcon,
+  MaximizedIcon,
+  MinimizeIcon
+} from '../../Icons';
 import StyledTitleBar from './StyledTitleBar';
 import useWindowActions from './useWindowActions';
 
@@ -12,7 +17,7 @@ type TitleBarProps = {
 const TitleBar = ({ id }: TitleBarProps): JSX.Element => {
   const {
     processes: {
-      [id]: { autoSizing, icon, title }
+      [id]: { autoSizing, icon, title, maximized }
     }
   } = useProcesses();
 
@@ -37,7 +42,7 @@ const TitleBar = ({ id }: TitleBarProps): JSX.Element => {
           <MinimizeIcon />
         </Button>
         <Button className="maximize" onClick={onMaximize} disabled={autoSizing}>
-          <MaximizeIcon />
+          {maximized ? <MaximizedIcon /> : <MaximizeIcon />}
         </Button>
         <Button className="close" onClick={onClose}>
           <CloseIcon />
