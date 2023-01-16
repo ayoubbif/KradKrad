@@ -57,10 +57,8 @@ const rndDefaults = {
       top: '-3px',
       width: '12px'
     }
-  } as HandleStyles,
-  style: <CSSProperties>{
-    zIndex: 1
-  }
+  } as HandleStyles
 };
 
 export default rndDefaults;
+

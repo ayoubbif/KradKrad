@@ -8,6 +8,10 @@ export type SessionContextState = {
   setThemeName: React.Dispatch<React.SetStateAction<string>>;
   windowStates: WindowStates;
   setWindowStates: React.Dispatch<React.SetStateAction<WindowStates>>;
+  foregroundId: string;
+  setForegroundId: React.Dispatch<React.SetStateAction<string>>;
+  setStackOrder: React.Dispatch<React.SetStateAction<string[]>>;
+  stackOrder: string[];
 };
 
 type WindowState = {
@@ -25,17 +29,22 @@ const useSessionContextState = (): SessionContextState => {
   const [sessionLoaded, setSessionLoaded] = useState(false);
   const [themeName, setThemeName] = useState('');
   const [windowStates, setWindowStates] = useState<WindowStates>({});
+  const [foregroundId, setForegroundId] = useState('');
+  const [stackOrder, setStackOrder] = useState<string[]>([]);
+
   useEffect(() => {
     if (sessionLoaded) {
       fs?.writeFile(
         SESSION_FILE,
         JSON.stringify({
           themeName,
-          windowStates
+          windowStates,
+          foregroundId,
+          stackOrder
         })
       );
     }
-  }, [fs, sessionLoaded, themeName, windowStates]);
+  }, [fs, sessionLoaded, themeName, windowStates, foregroundId, stackOrder]);
 
   useEffect(
     () =>
@@ -51,7 +60,16 @@ const useSessionContextState = (): SessionContextState => {
       }),
     [fs]
   );
-  return { themeName, setThemeName, windowStates, setWindowStates };
+  return {
+    foregroundId,
+    setForegroundId,
+    setStackOrder,
+    setThemeName,
+    setWindowStates,
+    stackOrder,
+    themeName,
+    windowStates
+  };
 };
 
 export default useSessionContextState;
