@@ -4,9 +4,9 @@ const sizes = {
     width: '100px'
   },
   fileEntry: {
-    fontSize: '14px',
-    iconSize: '50px',
-    letterSpacing: '0.6px'
+    fontSize: '12px',
+    iconSize: '45px',
+    letterSpacing: '0.5px'
   },
 
   fileManager: {
@@ -24,7 +24,7 @@ const sizes = {
     height: '45px',
     entry: {
       borderSize: '5px',
-      fontSize: '13px',
+      fontSize: '12px',
       maxWidth: '161px',
       icon: {
         size: '20px',

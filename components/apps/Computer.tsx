@@ -1,7 +1,4 @@
 import { useProcesses } from 'contexts/process';
-import { Inter } from '@next/font/google';
-
-const inter = Inter({ subsets: ['latin'] });
 
 const Computer = ({ id }): JSX.Element => {
   const {
@@ -10,7 +7,7 @@ const Computer = ({ id }): JSX.Element => {
     }
   } = useProcesses();
 
-  return <h1 className={inter.className}>{url}</h1>;
+  return <h1>{url}</h1>;
 };
 
 export default Computer;

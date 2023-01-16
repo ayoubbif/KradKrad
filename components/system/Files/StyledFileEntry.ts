@@ -12,7 +12,6 @@ const StyledFileEntry = styled.li`
     position: relative;
 
     &::before {
-      border: 1px solid hsla(10, 0%, 33%, 0.7);
       content: '';
       left: -5px;
       position: absolute;

@@ -22,7 +22,7 @@ const processDirectory: Processes = {
     autoSizing: false,
     Component: dynamic(() => import('components/apps/Computer')),
     hasWindow: true,
-    icon: '/computer.ico',
+    icon: '/computer.png',
     title: 'Computer'
   },
   V86: {
