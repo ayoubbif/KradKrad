@@ -8,6 +8,7 @@
     "build": "npm run build:fs && next build",
     "build:fs": "cd public && node ../node_modules/browserfs/dist/scripts/make_http_index.js > .index/fs.bfs.json && node ../components/apps/V86/fs2json.js --exclude .index --out .index/fs.9p.json .",
     "start": "next start",
+    "export": "next export",
     "lint": "next lint",
     "prettier": "prettier --write .",
     "stylelint": "stylelint **/*.ts",
