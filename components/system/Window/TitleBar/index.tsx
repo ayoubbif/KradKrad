@@ -1,9 +1,9 @@
-import { useProcesses } from 'contexts/process';
-import useWindowActions from 'hooks/useWindowActions';
 import Image from 'next/image';
-import StyledTitleBar from 'styles/components/system/Window/StyledTitleBar';
+import { useProcesses } from 'contexts/process';
 import Button from 'styles/generic/Button';
-import { CloseIcon, MaximizeIcon, MinimizeIcon } from '../Icons';
+import { CloseIcon, MaximizeIcon, MinimizeIcon } from '../../Icons';
+import StyledTitleBar from './StyledTitleBar';
+import useWindowActions from './useWindowActions';
 
 type TitleBarProps = {
   id: string;
@@ -48,4 +48,3 @@ const TitleBar = ({ id }: TitleBarProps): JSX.Element => {
 };
 
 export default TitleBar;
-

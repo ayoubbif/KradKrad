@@ -3,11 +3,12 @@ import { extname } from 'path';
 import { useEffect, useState } from 'react';
 import { IMAGE_FILE_EXTENSIONS } from 'utils/constants';
 import {
-  bufferToUrl,
   getIconByFileExtension,
   getProcessByFileExtension,
   getShortcut
-} from 'utils/fileFunctions';
+} from './fileFunctions';
+
+import { bufferToUrl } from 'utils/functions';
 
 type FileInfo = {
   icon: string;

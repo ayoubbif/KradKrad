@@ -3,7 +3,7 @@ import { useCallback } from 'react';
 import { DraggableEventHandler } from 'react-draggable';
 import useResizable from './useResizable';
 import useDraggable from './useDraggable';
-import rndDefaults from 'utils/rndDefaults';
+import rndDefaults from './rndDefaults';
 import { useSession } from 'contexts/session';
 import { useProcesses } from 'contexts/process';
 

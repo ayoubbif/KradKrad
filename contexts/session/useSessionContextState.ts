@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import type { Position } from 'react-rnd';
-import { Size } from '../../hooks/useResizable';
+import { Size } from '../../components/system/Window/RndWindow/useResizable';
 
 export type SessionContextState = {
   themeName: string;

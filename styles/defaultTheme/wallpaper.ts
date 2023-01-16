@@ -1,4 +1,4 @@
-import vantaClouds from 'utils/vantaClouds';
+import vantaClouds from 'components/system/Desktop/Wallpapers/vantaClouds';
 
 const wallpaper = vantaClouds({
   skyColor: 0x293c3c,
@@ -11,3 +11,4 @@ const wallpaper = vantaClouds({
 });
 
 export default wallpaper;
+

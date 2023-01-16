@@ -13,7 +13,7 @@ import { useFileSystem } from 'contexts/fileSystem';
 
 import { extname } from 'path';
 import { useCallback, useEffect, useState } from 'react';
-import { bufferToUrl, loadScript } from 'utils/fileFunctions';
+import { bufferToUrl, loadScript } from 'utils/functions';
 
 const useV86 = (
   url: string,

@@ -1,7 +1,7 @@
 import { useProcesses } from 'contexts/process';
-import StyledWindow from 'styles/components/system/Window/StyledWindow';
 import { ProcessComponentProps } from '../Processes/RenderProcess';
 import RndWindow from './RndWindow';
+import StyledWindow from './StyledWindow';
 import TitleBar from './TitleBar';
 
 type WindowProps = ProcessComponentProps & {
@@ -26,4 +26,3 @@ const Window = ({ children, id }: WindowProps): JSX.Element => {
 };
 
 export default Window;
-

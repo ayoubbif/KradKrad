@@ -11,3 +11,4 @@ const useClock = (): Date => {
 };
 
 export default useClock;
+
