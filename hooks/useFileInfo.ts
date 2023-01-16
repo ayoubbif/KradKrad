@@ -1,4 +1,4 @@
-import { useFileSystem } from 'contexts/fileSystem/fileSystem';
+import { useFileSystem } from 'contexts/fileSystem';
 import { extname } from 'path';
 import { useEffect, useState } from 'react';
 import { IMAGE_FILE_EXTENSIONS } from 'utils/constants';

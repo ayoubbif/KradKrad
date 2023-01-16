@@ -1,4 +1,4 @@
-import { useFileSystem } from 'contexts/fileSystem/fileSystem';
+import { useFileSystem } from 'contexts/fileSystem';
 import React, { useCallback } from 'react';
 
 const haltDragEvent = (event: React.DragEvent): void => {
@@ -39,4 +39,3 @@ const useFileDrop = (directory: string, getFiles: () => void): FileDrop => {
 };
 
 export default useFileDrop;
-

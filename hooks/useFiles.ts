@@ -1,4 +1,4 @@
-import { useFileSystem } from 'contexts/fileSystem/fileSystem';
+import { useFileSystem } from 'contexts/fileSystem';
 import { useCallback, useEffect, useState } from 'react';
 
 type Files = {
@@ -23,4 +23,3 @@ const useFiles = (directory: string): Files => {
 };
 
 export default useFiles;
-

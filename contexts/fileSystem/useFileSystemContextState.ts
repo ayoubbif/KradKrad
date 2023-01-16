@@ -1,7 +1,7 @@
 import { BFSRequire, configure } from 'browserfs';
 import type { FSModule } from 'browserfs/dist/node/core/FS';
 import { useEffect, useState } from 'react';
-import FileSystemConfig from 'utils/FileSystemConfig';
+import FileSystemConfig from './FileSystemConfig';
 
 export type FileSystemContextState = {
   fs: FSModule | null;
@@ -20,3 +20,4 @@ const useFileSystemContextState = (): FileSystemContextState => {
 };
 
 export default useFileSystemContextState;
+

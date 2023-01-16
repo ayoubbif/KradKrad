@@ -1,7 +1,7 @@
-import useProcessContextState from 'hooks/useProcessContextState';
-import type { ProcessContextState } from 'hooks/useProcessContextState';
-import contextFactory from 'utils/contextFactory';
-import { initialProcessContextState } from 'utils/initialContextStates';
+import contextFactory from 'contexts/contextFactory';
+import { initialProcessContextState } from 'contexts/initialContextStates';
+import type { ProcessContextState } from './useProcessContextState';
+import useProcessContextState from './useProcessContextState';
 
 const { Consumer, Provider, useContext } = contextFactory<ProcessContextState>(
   initialProcessContextState,

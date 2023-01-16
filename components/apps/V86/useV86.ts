@@ -9,7 +9,8 @@ import type {
   V86Starter,
   WindowWithV86Starter
 } from 'components/apps/V86/types';
-import { useFileSystem } from 'contexts/fileSystem/fileSystem';
+import { useFileSystem } from 'contexts/fileSystem';
+
 import { extname } from 'path';
 import { useCallback, useEffect, useState } from 'react';
 import { bufferToUrl, loadScript } from 'utils/fileFunctions';
