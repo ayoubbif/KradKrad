@@ -2,7 +2,7 @@ import type { Props } from 'react-rnd';
 import { useEffect, useState } from 'react';
 import { useTheme } from 'styled-components';
 import { DEFAULT_WINDOW_SIZE } from 'utils/constants';
-import { pxToNumber } from 'utils/functions';
+import { stripUnit } from 'polished';
 
 export type Size = NonNullable<Props['size']>;
 
@@ -27,7 +27,7 @@ const useResizable = (
   return [
     {
       height: maximized
-        ? `${window.innerHeight - pxToNumber(taskbar.height)}px`
+        ? `${window.innerHeight - Number(stripUnit(taskbar.height))}px`
         : height,
       width: maximized ? '100%' : width
     },
@@ -36,4 +36,3 @@ const useResizable = (
 };
 
 export default useResizable;
-

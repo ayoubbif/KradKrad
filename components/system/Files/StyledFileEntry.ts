@@ -22,8 +22,12 @@ const StyledFileEntry = styled.li`
   }
 
   button {
+    z-index: 1;
+
     figcaption {
       color: #000;
+      position: relative;
+      top: -1px;
       font-size: ${({ theme }) => theme.sizes.fileEntry.fontSize};
       text-shadow: ${({ theme }) => theme.colors.fileEntry.textShadow};
     }
