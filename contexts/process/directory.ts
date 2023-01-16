@@ -32,6 +32,13 @@ const processDirectory: Processes = {
     hasWindow: true,
     icon: '/icons/linux.png',
     title: 'Linux'
+  },
+  AudioPlayer: {
+    autoSizing: true,
+    Component: dynamic(() => import('components/apps/AudioPlayer')),
+    hasWindow: true,
+    icon: '/icons/musicplayer.png',
+    title: 'Audio Player'
   }
 };
 

@@ -1,0 +1,23 @@
+.controlsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 300px;
+  margin: 1rem auto;
+}
+
+.controls {
+  display: none;
+}
+
+.slider {
+  width: 65%;
+}
+
+.audioTime {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1rem 1rem;
+}
+

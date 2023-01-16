@@ -13,7 +13,6 @@ const colors = {
       0 0 5px rgba(00, 11, 22, 0.8)
     `
   },
-
   startButton: '#000',
   taskbar: {
     background: 'hsla(212, 96%, 32%, 0.5)',
@@ -25,9 +24,9 @@ const colors = {
     text: '#000'
   },
   window: {
-    background: '#ace9be',
+    background: '#f6c881',
     outline: '2px solid',
-    shadow: '0 0 22px 0 rgba(0, 0, 0, 0.7)'
+    shadow: '0 0 33px 0 rgba(0, 0, 0, 0.7)'
   }
 };
 

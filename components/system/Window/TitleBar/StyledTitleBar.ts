@@ -29,6 +29,7 @@ const StyledTitleBar = styled.header`
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
+      font-weight: bold;
     }
   }
 
@@ -44,7 +45,7 @@ const StyledTitleBar = styled.header`
       width: ${({ theme }) => theme.sizes.titlebar.buttonWidth};
 
       svg {
-        fill: #d1c4cd;
+        fill: #111;
         stroke: #000;
         width: ${({ theme }) => theme.sizes.titlebar.iconSize};
       }
@@ -58,22 +59,25 @@ const StyledTitleBar = styled.header`
 
       &:hover {
         &.close {
-          background-color: #880000;
+          background-color: #aa3333;
           transition: background-color 0.2s ease;
         }
         &.maximize {
-          background-color: #008800;
+          background-color: #77cc66;
           transition: background-color 0.2s ease;
         }
         &.minimize {
-          background-color: #000088;
+          background-color: #88ccff;
           transition: background-color 0.2s ease;
         }
       }
 
       &:disabled {
         svg {
-          fill: #acc285;
+          stroke: #ff0236;
+        }
+        &.maximize {
+          background-color: #555;
         }
       }
     }
