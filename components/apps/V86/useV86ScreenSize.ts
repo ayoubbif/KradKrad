@@ -1,7 +1,7 @@
 import type { EventCallback, V86Starter } from 'components/apps/V86/types';
 import { useSession } from 'contexts/session';
 import { useCallback, useEffect } from 'react';
-import type { CSSProperties } from 'styled-components';
+import type { CSSProperties } from 'react';
 import { useTheme } from 'styled-components';
 import { stripUnit } from 'polished';
 

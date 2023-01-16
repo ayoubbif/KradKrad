@@ -4,9 +4,9 @@ import { useEffect, useState } from 'react';
 import { IMAGE_FILE_EXTENSIONS } from 'utils/constants';
 import {
   getIconByFileExtension,
-  getProcessByFileExtension,
-  getShortcut
+  getProcessByFileExtension
 } from './fileFunctions';
+import ini from 'ini';
 
 import { bufferToUrl } from 'utils/functions';
 
@@ -31,11 +31,21 @@ const useFileInfo = (path: string): FileInfo => {
         });
 
       if (extension === '.url') {
-        getShortcut(path, fs)
-          .then(({ BaseURL: pid, URL: url, IconFile: icon }) =>
-            setInfo({ icon, pid, url })
-          )
-          .catch(getInfoByFileExtension);
+        fs.readFile(path, (error, contents = Buffer.from('')) => {
+          if (error) {
+            getInfoByFileExtension();
+          } else {
+            const {
+              InternetShortcut: {
+                BaseURL: pid = '',
+                URL: url = '',
+                IconFile: icon = ''
+              }
+            } = ini.parse(contents.toString());
+
+            setInfo({ icon, pid, url });
+          }
+        });
       } else if (IMAGE_FILE_EXTENSIONS.includes(extension)) {
         fs.readFile(path, (_error, contents = Buffer.from('')) => {
           setInfo({

@@ -22,8 +22,6 @@ const StyledFileEntry = styled.li`
   }
 
   button {
-    z-index: 1;
-
     figcaption {
       color: #000;
       position: relative;
