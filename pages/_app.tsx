@@ -1,6 +1,6 @@
 import Metadata from 'components/pages/MetaData';
 import StyledApp from 'components/pages/StyledApp';
-import { FileSystemProvider } from 'contexts/fileSystem';
+import { FileSystemProvider } from 'contexts/fileSystem/fileSystem';
 import { SessionProvider } from 'contexts/session';
 import type { AppProps } from 'next/app';
 

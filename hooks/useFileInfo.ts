@@ -1,8 +1,9 @@
-import { useFileSystem } from 'contexts/fileSystem';
+import { useFileSystem } from 'contexts/fileSystem/fileSystem';
 import { extname } from 'path';
 import { useEffect, useState } from 'react';
 import { IMAGE_FILE_EXTENSIONS } from 'utils/constants';
 import {
+  bufferToUrl,
   getIconByFileExtension,
   getProcessByFileExtension,
   getShortcut
@@ -35,7 +36,13 @@ const useFileInfo = (path: string): FileInfo => {
           )
           .catch(getInfoByFileExtension);
       } else if (IMAGE_FILE_EXTENSIONS.includes(extension)) {
-        setInfo({ icon: path, pid: 'ImageViewer', url: path });
+        fs.readFile(path, (_error, contents = Buffer.from('')) => {
+          setInfo({
+            icon: bufferToUrl(contents),
+            pid: 'ImageViewer',
+            url: path
+          });
+        });
       } else {
         getInfoByFileExtension();
       }
