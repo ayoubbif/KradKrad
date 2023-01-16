@@ -27,16 +27,13 @@ export const openProcess =
 
 export const toggleProcessSetting =
   (processId: string, setting: 'maximized' | 'minimized') =>
-  ({ [processId]: process, ...otherProcesses }: Processes): Processes =>
-    process
-      ? {
-          [processId]: {
-            ...process,
-            [setting]: !process[setting]
-          },
-          ...otherProcesses
-        }
-      : otherProcesses;
+  (currentProcesses: Processes): Processes => {
+    const { ...newProcesses } = currentProcesses;
+
+    newProcesses[processId][setting] = !newProcesses[processId][setting];
+
+    return newProcesses;
+  };
 
 export const maximizeProcess =
   (processId: string) =>
@@ -47,4 +44,3 @@ export const minimizeProcess =
   (processId: string) =>
   (Processes: Processes): Processes =>
     toggleProcessSetting(processId, 'minimized')(Processes);
-

@@ -60,6 +60,10 @@ declare module 'styled-components' {
           borderSize: string;
           fontSize: string;
           maxWidth: string;
+          icon: {
+            size: string;
+            margin: string;
+          };
         };
       };
       titlebar: {

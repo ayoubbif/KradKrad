@@ -25,7 +25,11 @@ const sizes = {
     entry: {
       borderSize: '5px',
       fontSize: '13px',
-      maxWidth: '161px'
+      maxWidth: '161px',
+      icon: {
+        size: '20px',
+        margin: '0 5px'
+      }
     }
   },
   titlebar: {
