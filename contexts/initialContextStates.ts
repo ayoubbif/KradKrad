@@ -19,6 +19,9 @@ export const initialSessionContextState: SessionContextState = {
   themeName: '',
   windowStates: {},
   setThemeName: () => undefined,
-  setWindowStates: () => undefined
+  setWindowStates: () => undefined,
+  foregroundId: '',
+  setForegroundId: () => undefined,
+  stackOrder: [],
+  setStackOrder: () => undefined
 };
-
