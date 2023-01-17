@@ -1,4 +1,4 @@
 [InternetShortcut]
-BaseURL=AudioPlayer
+BaseURL=MusicPlayer
 IconFile=/icons/musicplayer.png
-URL=AudioPlayer
+URL=MusicPlayer
