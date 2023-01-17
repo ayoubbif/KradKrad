@@ -4,6 +4,13 @@ export type EventCallback = (data: number[]) => void;
 
 type EventListener = (event: string, callback: EventCallback) => void;
 
+type V86Image = {
+  async?: boolean;
+  size?: number;
+  url: string;
+  use_parts?: boolean;
+};
+
 export type V86Starter = {
   add_listener: EventListener;
   destroy: () => void;
@@ -20,12 +27,8 @@ type V86Config = typeof v86Config & {
   memory_size: number;
   vga_memory_size: number;
   boot_order: number;
-  cdrom?: {
-    url?: string;
-  };
-  fda?: {
-    url?: string;
-  };
+  cdrom?: V86Image;
+  fda?: V86Image;
   screen_container: HTMLDivElement | null;
 };
 
