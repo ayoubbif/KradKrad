@@ -1,9 +1,11 @@
-import { Size } from 'hooks/useResizable';
+import { Size } from 'components/system/Window/RndWindow/useResizable';
 import { Position } from 'react-rnd';
 
+export const DEFAULT_LOCALE = 'en';
+
 export const DEFAULT_WINDOW_SIZE: Size = {
-  height: '200px',
-  width: '250px'
+  height: '440px',
+  width: '500px'
 };
 
 export const DEFAULT_WINDOW_POSITION: Position = {

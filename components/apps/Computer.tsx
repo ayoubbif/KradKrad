@@ -7,7 +7,7 @@ const Computer = ({ id }): JSX.Element => {
     }
   } = useProcesses();
 
-  return <h1>Thinith OS ---- {url}</h1>;
+  return <h1>{url}</h1>;
 };
 
 export default Computer;

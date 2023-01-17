@@ -1,0 +1,17 @@
+import TaskbarEntry from 'components/system/Taskbar/TaskbarEntry';
+import { ProcessConsumer } from 'contexts/process';
+import StyledTaskbarEntries from './StyledTaskbarEntries';
+
+const TaskbarEntries = (): JSX.Element => (
+  <StyledTaskbarEntries>
+    <ProcessConsumer>
+      {({ mapProcesses }) =>
+        mapProcesses(([id, { icon, title }]) => (
+          <TaskbarEntry key={id} icon={icon} id={id} title={title} />
+        ))
+      }
+    </ProcessConsumer>
+  </StyledTaskbarEntries>
+);
+
+export default TaskbarEntries;

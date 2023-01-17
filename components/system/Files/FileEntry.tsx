@@ -1,11 +1,13 @@
 import { useProcesses } from 'contexts/process';
-import useFileInfo from 'hooks/useFileInfo';
 import { useCallback } from 'react';
 import Image from 'next/image';
-import StyledFileEntry from 'styles/components/system/Files/StyledFileEntry';
 import Button from 'styles/generic/Button';
-import useDoubleClick from 'hooks/useDoubleClick';
 import CustomImage from 'styles/generic/CustomImage';
+import StyledFileEntry from './StyledFileEntry';
+import useFileInfo from './useFileInfo';
+import useDoubleClick from './useDoubleClick';
+import { useSession } from 'contexts/session';
+import { createPid } from 'contexts/process/functions';
 
 type FileEntryProps = {
   name: string;
@@ -14,8 +16,17 @@ type FileEntryProps = {
 
 const FileEntry = ({ name, path }: FileEntryProps): JSX.Element => {
   const { icon, pid, url } = useFileInfo(path);
-  const { open } = useProcesses();
-  const onClick = useCallback(() => open(pid, url), [open, pid, url]);
+  const { setForegroundId } = useSession();
+  const { open, processes } = useProcesses();
+  const onClick = useCallback(() => {
+    const id = createPid(pid, url);
+
+    if (processes[id]) {
+      setForegroundId(id);
+    } else {
+      open(pid, url);
+    }
+  }, [open, pid, processes, setForegroundId, url]);
 
   return (
     <StyledFileEntry>
@@ -38,4 +49,3 @@ const FileEntry = ({ name, path }: FileEntryProps): JSX.Element => {
 };
 
 export default FileEntry;
-

@@ -1,7 +1,7 @@
 import Clock from 'components/system/Taskbar/Clock';
-import StartButton from 'components/system/Taskbar/StartButton';
-import TaskbarEntries from 'components/system/Taskbar/TaskbarEntries';
-import StyledTaskbar from 'styles/components/system/Taskbar/StyledTaskbar';
+import StartButton from './StartButton';
+import StyledTaskbar from './StyledTaskbar';
+import TaskbarEntries from './TaskbarEntries';
 
 const Taskbar = (): JSX.Element => (
   <StyledTaskbar>

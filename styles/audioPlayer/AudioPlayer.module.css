@@ -1,0 +1,24 @@
+.controlsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: 1rem auto;
+}
+
+.controls {
+  display: none;
+}
+
+.slider {
+  width: 75%;
+}
+
+.audioTime {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.song {
+  padding: 0.5rem;
+}

@@ -1,18 +1,18 @@
-import FileEntry from 'components/system/Files/FileEntry';
-import useFiles from 'hooks/useFiles';
 import { basename, extname, resolve } from 'path';
-import StyledFileManager from 'styles/components/system/Files/StyledFileManager';
-import useFileDrop from 'hooks/useFileDrop';
+import FileEntry from './FileEntry';
+import StyledFileManager from './StyledFileManager';
+import useFileDrop from './useFileDrop';
+import useFiles from './useFiles';
 
 type FileManagerProps = {
   directory: string;
 };
 
 const FileManager = ({ directory }: FileManagerProps): JSX.Element => {
-  const { files, getFiles } = useFiles(directory);
+  const { files, updateFiles } = useFiles(directory);
 
   return (
-    <StyledFileManager {...useFileDrop(directory, getFiles)}>
+    <StyledFileManager {...useFileDrop(directory, updateFiles)}>
       {files.map((file) => (
         <FileEntry
           key={file}

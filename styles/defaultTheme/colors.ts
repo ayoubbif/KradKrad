@@ -13,21 +13,20 @@ const colors = {
       0 0 5px rgba(00, 11, 22, 0.8)
     `
   },
-
   startButton: '#000',
   taskbar: {
-    background: 'hsla(212, 96%, 10%, 0.5)',
-    hover: 'hsla(350, 42%, 69%, 0.9)'
+    background: 'hsla(212, 96%, 32%, 0.5)',
+    hover: 'hsla(360, 69%, 69%, 0.8)'
   },
   text: '#000',
   titlebar: {
-    background: '#000',
-    text: '#fff'
+    background: '#eee',
+    text: '#000'
   },
   window: {
-    background: '#ace9be',
+    background: '#5ed3df',
     outline: '2px solid',
-    shadow: '0 0 22px 0 rgba(0, 0, 0, 0.7)'
+    shadow: '0 0 33px 0 rgba(0, 0, 0, 0.7)'
   }
 };
 
