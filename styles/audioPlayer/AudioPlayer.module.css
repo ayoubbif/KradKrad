@@ -11,13 +11,13 @@
 }
 
 .slider {
-  width: 75%;
+  width: 70%;
 }
 
 .audioTime {
   display: flex;
-  align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
+  align-content: center;
 }
 .song {
   padding: 0.5rem;

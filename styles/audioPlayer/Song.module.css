@@ -21,7 +21,7 @@
   width: 300px;
   height: 300px;
   border-radius: 100%;
-  border: 2px solid rgb(33, 22, 11);
+  border: 1px solid rgb(00, 77, 99);
   background: conic-gradient(
     white,
     white,
@@ -79,8 +79,6 @@
 
 .audioPlayer {
   display: flex;
-  align-items: center;
   justify-content: center;
-  flex-direction: column;
-  margin: 1rem;
+  margin: 1rem auto;
 }

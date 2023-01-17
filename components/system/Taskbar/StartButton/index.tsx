@@ -6,7 +6,7 @@ import StyledStartButton from './StyledStartButton';
 const StartButton = () => (
   <ProcessConsumer>
     {({ close, open }) => (
-      <StyledStartButton title="Start">
+      <StyledStartButton title="The Basement">
         <StartButtonIcon />
       </StyledStartButton>
     )}
@@ -14,3 +14,4 @@ const StartButton = () => (
 );
 
 export default StartButton;
+

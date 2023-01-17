@@ -16,7 +16,7 @@ const StyledTaskbarEntry = styled.li`
     border-bottom: ${({ theme }) =>
       `${theme.sizes.taskbar.entry.borderSize}
     solid
-    #fe1c33`};
+    #5cee11`};
   }
 
   figure {
@@ -37,6 +37,7 @@ const StyledTaskbarEntry = styled.li`
       overflow-x: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
+      font-weight: 600;
     }
   }
 `;
