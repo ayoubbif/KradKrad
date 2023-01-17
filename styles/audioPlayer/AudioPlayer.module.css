@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 300px;
+  width: 100%;
   margin: 1rem auto;
 }
 
@@ -11,13 +11,14 @@
 }
 
 .slider {
-  width: 65%;
+  width: 75%;
 }
 
 .audioTime {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  margin: 1rem 1rem;
+  justify-content: space-around;
 }
-
+.song {
+  padding: 0.5rem;
+}

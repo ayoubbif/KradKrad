@@ -77,10 +77,10 @@
   filter: drop-shadow(0 0 2px grey);
 }
 
-.song {
+.audioPlayer {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  width: 300px;
-  margin: 1rem auto;
+  justify-content: center;
+  flex-direction: column;
+  margin: 1rem;
 }

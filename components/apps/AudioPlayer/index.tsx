@@ -2,6 +2,7 @@ import { useProcesses } from 'contexts/process';
 import mainResponse from 'responses/main';
 import AudioPlayer from './AudioPlayer';
 import { Song } from './types';
+import styles from 'styles/audioPlayer/Song.module.css';
 
 const songs: Song[] = [];
 
@@ -22,7 +23,11 @@ const AudioP = ({ id }): JSX.Element => {
     }
   } = useProcesses();
 
-  return <AudioPlayer songs={tracklist} />;
+  return (
+    <div className={styles.audioPlayer}>
+      <AudioPlayer songs={tracklist} />
+    </div>
+  );
 };
 
 export default AudioP;

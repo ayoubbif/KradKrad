@@ -22,7 +22,7 @@ const AudioPlayer: NextPage<{ songs: Song[] }> = ({ songs }) => {
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
   return (
     <>
-      <div className="border-2 border-black bg-emerald-300">
+      <div>
         <div className={styles.song}>
           <SongComponent song={songs[currentTrack]} isPlaying={isPlaying} />
         </div>
