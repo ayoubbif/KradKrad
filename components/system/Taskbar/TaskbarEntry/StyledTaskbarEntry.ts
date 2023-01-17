@@ -22,18 +22,18 @@ const StyledTaskbarEntry = styled.li`
   figure {
     display: flex;
     align-items: center;
-    margin: 0 5px;
+    padding: 10px;
 
     img {
+      image-rendering: pixelated;
       height: ${({ theme }) => theme.sizes.taskbar.entry.icon.size};
-      margin: ${({ theme }) => theme.sizes.taskbar.entry.icon.margin};
       width: ${({ theme }) => theme.sizes.taskbar.entry.icon.size};
     }
 
     figcaption {
       color: ${({ theme }) => theme.colors.text};
       font-size: ${({ theme }) => theme.sizes.taskbar.entry.fontSize};
-      margin: 0 2px;
+      margin-left: 5px;
       overflow-x: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;

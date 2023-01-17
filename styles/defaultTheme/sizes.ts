@@ -27,8 +27,7 @@ const sizes = {
       fontSize: '12px',
       maxWidth: '161px',
       icon: {
-        size: '20px',
-        margin: '0 5px'
+        size: '20px'
       }
     }
   },
@@ -47,3 +46,4 @@ const sizes = {
 };
 
 export default sizes;
+

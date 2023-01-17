@@ -19,6 +19,7 @@ const StyledTitleBar = styled.header`
       min-width: inherit;
 
       img {
+        image-rendering: pixelated;
         height: ${({ theme }) => theme.sizes.titlebar.iconSize};
         margin: ${({ theme }) => theme.sizes.titlebar.iconMargin};
         width: ${({ theme }) => theme.sizes.titlebar.iconSize};
@@ -85,3 +86,4 @@ const StyledTitleBar = styled.header`
 `;
 
 export default StyledTitleBar;
+
