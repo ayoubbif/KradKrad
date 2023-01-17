@@ -1,5 +1,5 @@
 import { basename, extname, resolve } from 'path';
-import FileEntry from './FileEntry';
+import FileEntry from '../FileEntry';
 import StyledFileManager from './StyledFileManager';
 import useFileDrop from './useFileDrop';
 import useFiles from './useFiles';

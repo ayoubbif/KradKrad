@@ -5,7 +5,7 @@ import Button from 'styles/generic/Button';
 import CustomImage from 'styles/generic/CustomImage';
 import StyledFileEntry from './StyledFileEntry';
 import useFileInfo from './useFileInfo';
-import useDoubleClick from './useDoubleClick';
+import useDoubleClick from '../../useDoubleClick';
 import { useSession } from 'contexts/session';
 import { createPid } from 'contexts/process/functions';
 

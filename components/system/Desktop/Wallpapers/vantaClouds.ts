@@ -35,8 +35,8 @@ const vantaClouds =
         : undefined;
 
     if (vantaEffect) {
-      const { onDestroy } = colorCycle(settings.skyColor, (color) => {
-        vantaEffect.options.color = color;
+      const { onDestroy } = colorCycle(settings.cloudColor, (color) => {
+        vantaEffect.setOptions({ color });
       });
 
       vantaEffect.onDestroy = onDestroy;
