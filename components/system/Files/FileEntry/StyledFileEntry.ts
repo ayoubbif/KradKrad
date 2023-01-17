@@ -21,17 +21,23 @@ const StyledFileEntry = styled.li`
   }
 
   button {
-    figcaption {
-      color: #000;
-      position: relative;
-      top: -1px;
-      font-size: ${({ theme }) => theme.sizes.fileEntry.fontSize};
-      text-shadow: ${({ theme }) => theme.colors.fileEntry.textShadow};
-    }
+    figure {
+      display: flex;
+      flex-direction: column;
+      place-items: center;
 
-    img {
-      height: ${({ theme }) => theme.sizes.fileEntry.iconSize};
-      width: ${({ theme }) => theme.sizes.fileEntry.iconSize};
+      figcaption {
+        color: #000;
+        position: relative;
+        padding: 2px 0;
+        font-size: ${({ theme }) => theme.sizes.fileEntry.fontSize};
+        text-shadow: ${({ theme }) => theme.colors.fileEntry.textShadow};
+      }
+
+      img {
+        height: ${({ theme }) => theme.sizes.fileEntry.iconSize};
+        width: ${({ theme }) => theme.sizes.fileEntry.iconSize};
+      }
     }
   }
 `;
