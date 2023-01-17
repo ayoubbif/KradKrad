@@ -59,7 +59,7 @@ const StyledTitleBar = styled.header`
 
       &:hover {
         &.close {
-          background-color: #aa3333;
+          background-color: #ff1133;
           transition: background-color 0.2s ease;
         }
         &.maximize {
@@ -67,7 +67,7 @@ const StyledTitleBar = styled.header`
           transition: background-color 0.2s ease;
         }
         &.minimize {
-          background-color: #88ccff;
+          background-color: #ffe339;
           transition: background-color 0.2s ease;
         }
       }

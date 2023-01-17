@@ -24,7 +24,7 @@ const colors = {
     text: '#000'
   },
   window: {
-    background: '#f6c881',
+    background: '#5ed3df',
     outline: '2px solid',
     shadow: '0 0 33px 0 rgba(0, 0, 0, 0.7)'
   }
