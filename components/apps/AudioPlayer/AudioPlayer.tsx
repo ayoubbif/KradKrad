@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import type { Song } from './types';
-import styles from './Song.module.css';
+import styles from 'styles/audioPlayer/AudioPlayer.module.css';
 import Cassette from './Cassette';
 import { NextPage } from 'next';
 import SongComponent from './Song';

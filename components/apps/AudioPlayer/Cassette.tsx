@@ -1,6 +1,6 @@
 import { FiPlay, FiPause, FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 import { useState, useEffect, useRef, SyntheticEvent } from 'react';
-import styles from './AudioPlayer.module.css';
+import styles from 'styles/audioPlayer/AudioPlayer.module.css';
 import { AudioPlayerProps } from './types';
 
 const Cassette = (props: AudioPlayerProps) => {

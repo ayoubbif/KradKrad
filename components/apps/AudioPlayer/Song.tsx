@@ -1,4 +1,4 @@
-import styles from './Song.module.css';
+import styles from 'styles/audioPlayer/Song.module.css';
 import Image from 'next/image';
 
 export type Song = {
