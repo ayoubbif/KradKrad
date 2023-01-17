@@ -16,7 +16,7 @@ const StyledTaskbarEntry = styled.li`
     border-bottom: ${({ theme }) =>
       `${theme.sizes.taskbar.entry.borderSize}
     solid
-    #3ac992`};
+    #fe1c33`};
   }
 
   figure {

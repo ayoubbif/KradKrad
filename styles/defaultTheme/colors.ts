@@ -15,8 +15,8 @@ const colors = {
   },
   startButton: '#000',
   taskbar: {
-    background: 'hsla(151, 89%, 18%, 0.6)',
-    hover: 'hsla(66, 19%, 108%, 0.8)'
+    background: 'hsla(156, 44%, 64%, 0.6)',
+    hover: 'hsla(6, 93%, 71%, 0.8)'
   },
   text: '#000',
   titlebar: {
@@ -24,7 +24,7 @@ const colors = {
     text: '#000'
   },
   window: {
-    background: '#adfec2',
+    background: '#FACE72',
     outline: '2px solid',
     shadow: '0 0 33px 0 rgba(0, 0, 0, 0.7)'
   }
