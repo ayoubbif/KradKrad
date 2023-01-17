@@ -4,7 +4,8 @@ import packageInfo from '../../package.json';
 
 const MetaData = (): JSX.Element => (
   <Head>
-    <title>{packageInfo.name}</title>
+    <title>The Basement</title>
+    <link rel="icon" href="/favicon.ico"></link>
     <meta name="description" content={packageInfo.description} />
   </Head>
 );

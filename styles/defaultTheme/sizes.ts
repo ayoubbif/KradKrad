@@ -16,12 +16,12 @@ const sizes = {
     padding: '15px'
   },
   startButton: {
-    iconSize: '30px',
-    width: '45px'
+    iconSize: '40px',
+    width: '55px'
   },
   taskbar: {
-    blur: '7px',
-    height: '45px',
+    blur: '8px',
+    height: '50px',
     entry: {
       borderSize: '5px',
       fontSize: '12px',
