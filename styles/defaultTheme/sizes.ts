@@ -36,7 +36,7 @@ const sizes = {
     buttonWidth: '45px',
     fontSize: '13px',
     height: '30px',
-    iconMargin: '0 5px',
+    iconMargin: '0 5px 0 8px',
     iconSize: '19px'
   },
   window: {
