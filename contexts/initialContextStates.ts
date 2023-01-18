@@ -11,6 +11,7 @@ export const initialProcessContextState: ProcessContextState = {
   open: () => undefined,
   maximize: () => undefined,
   minimize: () => undefined,
+  linkElement: () => undefined,
   mapProcesses: () => [],
   processes: {}
 };
@@ -25,3 +26,4 @@ export const initialSessionContextState: SessionContextState = {
   stackOrder: [],
   setStackOrder: () => undefined
 };
+

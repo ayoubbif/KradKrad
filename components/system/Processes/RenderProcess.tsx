@@ -4,7 +4,6 @@ const Window = dynamic(() => import('components/system/Window'));
 
 export type ProcessComponentProps = {
   id: string;
-  children?: React.ReactNode;
 };
 
 type RenderProcessProps = {

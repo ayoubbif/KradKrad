@@ -4,7 +4,7 @@ import { MILLISECONDS_IN_SECOND } from 'utils/constants';
 const fps = 15;
 const timePerFrame = MILLISECONDS_IN_SECOND / fps;
 
-type ColorCycle = {
+export type ColorCycle = {
   onDestroy: () => void;
 };
 
@@ -42,3 +42,4 @@ const colorCycle = (
 };
 
 export default colorCycle;
+

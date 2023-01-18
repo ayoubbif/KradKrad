@@ -22,7 +22,7 @@ export const openProcess =
   (currentProcesses: Processes): Processes => {
     const id = createPid(processId, url);
 
-    return currentProcesses[processId] || !processDirectory[processId]
+    return currentProcesses[id] || !processDirectory[processId]
       ? currentProcesses
       : {
           ...currentProcesses,
@@ -32,6 +32,7 @@ export const openProcess =
           }
         };
   };
+
 export const setProcessSettings =
   (processId: string, settings: Partial<Process>) =>
   (currentProcesses: Processes): Processes => {
@@ -59,6 +60,7 @@ export const maximizeProcess =
   (processId: string) =>
   (currentProcesses: Processes): Processes =>
     toggleProcessSetting(processId, 'maximized')(currentProcesses);
+
 export const minimizeProcess =
   (processId: string) =>
   (currentProcesses: Processes): Processes =>

@@ -9,7 +9,7 @@ import useDoubleClick from '../../useDoubleClick';
 import { useSession } from 'contexts/session';
 import { createPid } from 'contexts/process/functions';
 
-type FileEntryProps = {
+export type FileEntryProps = {
   name: string;
   path: string;
 };
@@ -49,3 +49,4 @@ const FileEntry = ({ name, path }: FileEntryProps): JSX.Element => {
 };
 
 export default FileEntry;
+

@@ -1,5 +1,5 @@
-import { useSession } from 'contexts/session';
 import { useProcesses } from 'contexts/process';
+import { useSession } from 'contexts/session';
 import { useCallback, useEffect, useMemo } from 'react';
 
 type Focusable = {
@@ -36,6 +36,7 @@ const useFocusable = (
     setForegroundId(id);
     windowRef.current?.focus();
   }, [id, setForegroundId, setStackOrder, windowRef]);
+
   useEffect(() => {
     if (isForeground) moveToFront();
   }, [isForeground, moveToFront]);

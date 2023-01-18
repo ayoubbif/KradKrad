@@ -1,5 +1,7 @@
-import Document, { DocumentContext, DocumentInitialProps } from 'next/document';
+import type { DocumentContext, DocumentInitialProps } from 'next/document';
+import Document, { Head, Html, Main, NextScript } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
+import { DEFAULT_LOCALE } from 'utils/constants';
 const withServerStyleSheet = async (
   ctx: DocumentContext
 ): Promise<DocumentInitialProps> => {
@@ -26,6 +28,17 @@ class MyDocument extends Document {
     ctx: DocumentContext
   ): Promise<DocumentInitialProps> {
     return withServerStyleSheet(ctx);
+  }
+  render(): JSX.Element {
+    return (
+      <Html lang={DEFAULT_LOCALE}>
+        <Head />
+        <body>
+          <Main />
+          <NextScript />
+        </body>
+      </Html>
+    );
   }
 }
 export default MyDocument;

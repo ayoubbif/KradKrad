@@ -10,7 +10,7 @@ import ini from 'ini';
 
 import { bufferToUrl } from 'utils/functions';
 
-type FileInfo = {
+export type FileInfo = {
   icon: string;
   pid: string;
   url: string;
