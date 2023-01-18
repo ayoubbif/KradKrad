@@ -47,8 +47,15 @@ const processDirectory: Processes = {
     hasWindow: true,
     icon: '/icons/musicplayer.png',
     title: 'Music Player'
+  },
+  JSDOS: {
+    autoSizing: true,
+    backgroundColor: '#000',
+    Component: dynamic(() => import('components/apps/JSDOS')),
+    hasWindow: true,
+    icon: '/icons/jsdos.png',
+    title: 'JS-DOS'
   }
 };
 
 export default processDirectory;
-
