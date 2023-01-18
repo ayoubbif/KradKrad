@@ -26,6 +26,13 @@ export type Processes = {
 };
 
 const processDirectory: Processes = {
+  FileExplorer: {
+    backgroundColor: '#202020',
+    Component: dynamic(() => import('components/apps/FileExplorer')),
+    hasWindow: true,
+    icon: '/icons/explorer.png',
+    title: 'Directory'
+  },
   Computer: {
     autoSizing: false,
     Component: dynamic(() => import('components/apps/Computer')),
@@ -39,7 +46,7 @@ const processDirectory: Processes = {
     Component: dynamic(() => import('components/apps/V86')),
     hasWindow: true,
     icon: '/icons/linux.png',
-    title: 'Linux'
+    title: 'Virtual x86'
   },
   MusicPlayer: {
     autoSizing: true,
@@ -54,7 +61,7 @@ const processDirectory: Processes = {
     Component: dynamic(() => import('components/apps/JSDOS')),
     hasWindow: true,
     icon: '/icons/jsdos.png',
-    title: 'JS-DOS'
+    title: 'js-dos v7'
   }
 };
 

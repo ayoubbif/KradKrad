@@ -35,7 +35,7 @@ const vantaClouds =
         : undefined;
 
     if (vantaEffect) {
-      const { onDestroy } = colorCycle(settings.cloudColor, (color) => {
+      const { onDestroy } = colorCycle(settings.skyColor, (color) => {
         vantaEffect.setOptions({ color });
       });
 
@@ -46,3 +46,4 @@ const vantaClouds =
   };
 
 export default vantaClouds;
+
