@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { useCallback } from 'react';
+import { useCallback, useMemo } from 'react';
 import { useProcesses } from 'contexts/process';
 import { useSession } from 'contexts/session';
 import Button from 'styles/generic/Button';
@@ -14,17 +14,32 @@ type TaskbarEntryProps = {
 };
 
 const TaskbarEntry = ({ icon, id, title }: TaskbarEntryProps): JSX.Element => {
-  const { minimize } = useProcesses();
   const nextFocusableId = useNextFocusable(id);
-  const { setForegroundId } = useSession();
+  const { foregroundId, setForegroundId } = useSession();
+  const isForeground = useMemo(() => id === foregroundId, [foregroundId, id]);
+  const {
+    linkElement,
+    minimize,
+    processes: {
+      [id]: { minimized }
+    }
+  } = useProcesses();
+  const linkTaskbarEntry = useCallback(
+    (taskbarEntry: HTMLButtonElement) =>
+      linkElement(id, 'taskbarEntry', taskbarEntry),
+    [id, linkElement]
+  );
   const onClick = useCallback(() => {
-    minimize(id);
-    setForegroundId(nextFocusableId);
-  }, [id, minimize, nextFocusableId, setForegroundId]);
+    if (minimized || isForeground) {
+      minimize(id);
+    }
+
+    setForegroundId(isForeground ? nextFocusableId : id);
+  }, [id, isForeground, minimize, minimized, nextFocusableId, setForegroundId]);
 
   return (
-    <StyledTaskbarEntry>
-      <Button onClick={onClick}>
+    <StyledTaskbarEntry foreground={isForeground}>
+      <Button onClick={onClick} ref={linkTaskbarEntry}>
         <CustomImage>
           <Image
             src={icon}

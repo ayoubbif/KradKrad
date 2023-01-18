@@ -1,17 +1,25 @@
 import { ProcessComponentProps } from 'components/system/Processes/RenderProcess';
 import dynamic from 'next/dynamic';
 
-export type Process = {
-  backgroundColor?: string;
-  Component: React.ComponentType<ProcessComponentProps>;
-  hasWindow?: boolean;
-  icon: string;
-  title: string;
+export type ProcessElements = {
+  taskbarEntry?: HTMLElement;
+};
+
+export type ProcessToggles = {
   maximized?: boolean;
   minimized?: boolean;
-  autoSizing?: boolean;
-  url?: string;
 };
+
+export type Process = ProcessElements &
+  ProcessToggles & {
+    autoSizing?: boolean;
+    backgroundColor?: string;
+    Component: React.ComponentType<ProcessComponentProps>;
+    hasWindow?: boolean;
+    icon: string;
+    title: string;
+    url?: string;
+  };
 
 export type Processes = {
   [id: string]: Process;
@@ -43,3 +51,4 @@ const processDirectory: Processes = {
 };
 
 export default processDirectory;
+

@@ -14,6 +14,8 @@ const colors = {
   },
   startButton: '#000',
   taskbar: {
+    active: 'hsla(0, 0%, 40%, 70%)',
+    activeHover: 'hsla(0, 0%, 50%, 70%)',
     background: 'hsla(156, 44%, 64%, 0.6)',
     hover: 'hsla(6, 93%, 71%, 0.8)'
   },
@@ -30,3 +32,4 @@ const colors = {
 };
 
 export default colors;
+

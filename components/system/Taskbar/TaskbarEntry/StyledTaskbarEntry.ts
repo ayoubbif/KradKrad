@@ -1,18 +1,31 @@
 import styled from 'styled-components';
 
-const StyledTaskbarEntry = styled.li`
+type StyledTaskbarEntryProps = {
+  foreground: boolean;
+};
+
+const StyledTaskbarEntry = styled.li<StyledTaskbarEntryProps>`
+  background-color: ${({ foreground, theme }) =>
+    foreground ? theme.colors.taskbar.active : ''};
   border: 1px solid black;
   display: flex;
   min-width: 0;
+  margin: ${({ foreground }) => (foreground ? '' : '0 4px')};
   border-bottom: ${({ theme }) =>
     `${theme.sizes.taskbar.entry.borderSize}
     solid
     ${theme.colors.highlight}`};
-
-  width: ${({ theme }) => theme.sizes.taskbar.entry.maxWidth};
+  padding: ${({ foreground }) => (foreground ? '0 4px' : '')};
+  width: ${({ foreground, theme }) =>
+    foreground
+      ? theme.sizes.taskbar.entry.maxWidth
+      : `calc(${theme.sizes.taskbar.entry.maxWidth} - 8px)`};
 
   &:hover {
-    background-color: ${({ theme }) => theme.colors.taskbar.hover};
+    background-color: ${({ foreground, theme }) =>
+      foreground
+        ? theme.colors.taskbar.activeHover
+        : theme.colors.taskbar.hover};
     border-bottom: ${({ theme }) =>
       `${theme.sizes.taskbar.entry.borderSize}
     solid

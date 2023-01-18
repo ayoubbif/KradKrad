@@ -35,6 +35,7 @@ const StyledFileEntry = styled.li`
       }
 
       img {
+        image-rendering: pixelated;
         height: ${({ theme }) => theme.sizes.fileEntry.iconSize};
         width: ${({ theme }) => theme.sizes.fileEntry.iconSize};
       }

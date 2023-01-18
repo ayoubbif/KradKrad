@@ -1,10 +1,15 @@
 import { useCallback, useState } from 'react';
-import type { Process, Processes } from 'contexts/process/directory';
+import type {
+  Process,
+  ProcessElements,
+  Processes
+} from 'contexts/process/directory';
 import {
   closeProcess,
   maximizeProcess,
   minimizeProcess,
-  openProcess
+  openProcess,
+  setProcessElement
 } from 'contexts/process/functions';
 
 type ProcessesMap = (
@@ -14,6 +19,11 @@ type ProcessesMap = (
 export type ProcessContextState = {
   close: (id: string) => void;
   open: (id: string, url: string) => void;
+  linkElement: (
+    id: string,
+    name: keyof ProcessElements,
+    element: HTMLElement
+  ) => void;
   maximize: (id: string) => void;
   minimize: (id: string) => void;
   mapProcesses: ProcessesMap;
@@ -39,8 +49,20 @@ const useProcessContextState = (): ProcessContextState => {
     (id: string) => setProcesses(minimizeProcess(id)),
     []
   );
-
-  return { close, open, maximize, minimize, mapProcesses, processes };
+  const linkElement = useCallback(
+    (id: string, name: keyof ProcessElements, element: HTMLElement) =>
+      setProcesses(setProcessElement(id, name, element)),
+    []
+  );
+  return {
+    close,
+    linkElement,
+    mapProcesses,
+    maximize,
+    minimize,
+    open,
+    processes
+  };
 };
 
 export default useProcessContextState;
