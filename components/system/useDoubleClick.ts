@@ -15,7 +15,7 @@ const useDoubleClick: DoubleClick = (handler, timeout = 500) => {
         }, timeout);
       } else {
         clearTimeout(timer.current);
-
+        event.stopPropagation();
         handler(event);
         timer.current = null;
       }
@@ -27,3 +27,4 @@ const useDoubleClick: DoubleClick = (handler, timeout = 500) => {
 };
 
 export default useDoubleClick;
+

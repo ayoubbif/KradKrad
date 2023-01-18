@@ -11,6 +11,7 @@ import {
 } from '../../Icons';
 import StyledTitleBar from './StyledTitleBar';
 import useWindowActions from './useWindowActions';
+import useDoubleClick from 'components/system/useDoubleClick';
 
 type TitleBarProps = {
   id: string;
@@ -28,7 +29,7 @@ const TitleBar = ({ id }: TitleBarProps): JSX.Element => {
 
   return (
     <StyledTitleBar className="handle" foreground={isForeground}>
-      <h1>
+      <h1 onClick={useDoubleClick(autoSizing ? () => undefined : onMaximize)}>
         <figure>
           <Image
             src={icon}
@@ -36,6 +37,7 @@ const TitleBar = ({ id }: TitleBarProps): JSX.Element => {
             height={16}
             width={16}
             draggable={false}
+            onClick={useDoubleClick(onClose)}
           />
           <figcaption>{title}</figcaption>
         </figure>
@@ -56,4 +58,3 @@ const TitleBar = ({ id }: TitleBarProps): JSX.Element => {
 };
 
 export default TitleBar;
-
