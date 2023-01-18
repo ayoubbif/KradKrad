@@ -33,13 +33,12 @@ const vantaClouds =
             ...settings
           })
         : undefined;
-
     if (vantaEffect) {
-      const { onDestroy } = colorCycle(settings.skyColor, (color) => {
-        vantaEffect.setOptions({ color });
-      });
+      const { stop: stopColorCycle } = colorCycle(settings.skyColor, (color) =>
+        vantaEffect.setOptions({ color })
+      );
 
-      vantaEffect.onDestroy = onDestroy;
+      vantaEffect.onDestroy = stopColorCycle;
     }
 
     return () => vantaEffect?.destroy?.();
