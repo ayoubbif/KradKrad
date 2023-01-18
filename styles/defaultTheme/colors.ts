@@ -21,8 +21,11 @@ const colors = {
   },
   text: '#000',
   titlebar: {
-    background: '#eee',
-    text: '#000'
+    background: '#efe',
+    text: 'rgb(16, 176, 18)',
+    textInactive: 'rgb(300, 96, 18)',
+    backgroundInactive: 'rgb(90, 93, 86)',
+    buttonInactive: 'rgb(128, 128, 128)'
   },
   window: {
     background: '#fadcca',
@@ -32,4 +35,3 @@ const colors = {
 };
 
 export default colors;
-

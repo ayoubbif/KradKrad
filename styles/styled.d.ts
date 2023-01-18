@@ -24,6 +24,9 @@ declare module 'styled-components' {
       titlebar: {
         background: string;
         text: string;
+        backgroundInactive: string;
+        buttonInactive: string;
+        textInactive: string;
       };
       window: {
         background: string;

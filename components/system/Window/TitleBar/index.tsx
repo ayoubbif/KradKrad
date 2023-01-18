@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import { useProcesses } from 'contexts/process';
 import Button from 'styles/generic/Button';
+import { useSession } from 'contexts/session';
+import { useMemo } from 'react';
 import {
   CloseIcon,
   MaximizeIcon,
@@ -20,11 +22,12 @@ const TitleBar = ({ id }: TitleBarProps): JSX.Element => {
       [id]: { autoSizing, icon, title, maximized }
     }
   } = useProcesses();
-
+  const { foregroundId } = useSession();
+  const isForeground = useMemo(() => id === foregroundId, [foregroundId, id]);
   const { onMaximize, onMinimize, onClose } = useWindowActions(id);
 
   return (
-    <StyledTitleBar className="handle">
+    <StyledTitleBar className="handle" foreground={isForeground}>
       <h1>
         <figure>
           <Image
@@ -53,3 +56,4 @@ const TitleBar = ({ id }: TitleBarProps): JSX.Element => {
 };
 
 export default TitleBar;
+
