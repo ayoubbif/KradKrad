@@ -38,7 +38,7 @@ const TaskbarEntry = ({ icon, id, title }: TaskbarEntryProps): JSX.Element => {
   }, [id, isForeground, minimize, minimized, nextFocusableId, setForegroundId]);
 
   return (
-    <StyledTaskbarEntry foreground={isForeground}>
+    <StyledTaskbarEntry foreground={isForeground} title={title}>
       <Button onClick={onClick} ref={linkTaskbarEntry}>
         <CustomImage>
           <Image
@@ -56,3 +56,4 @@ const TaskbarEntry = ({ icon, id, title }: TaskbarEntryProps): JSX.Element => {
 };
 
 export default TaskbarEntry;
+

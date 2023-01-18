@@ -10,12 +10,12 @@ const StyledTaskbarEntry = styled.li<StyledTaskbarEntryProps>`
   border: 1px solid black;
   display: flex;
   min-width: 0;
-  margin: ${({ foreground }) => (foreground ? '' : '0 4px')};
   border-bottom: ${({ theme }) =>
     `${theme.sizes.taskbar.entry.borderSize}
     solid
     ${theme.colors.highlight}`};
   padding: ${({ foreground }) => (foreground ? '0 4px' : '')};
+  transition: all 0.075s;
   width: ${({ foreground, theme }) =>
     foreground
       ? theme.sizes.taskbar.entry.maxWidth
@@ -39,6 +39,7 @@ const StyledTaskbarEntry = styled.li<StyledTaskbarEntryProps>`
 
     img {
       image-rendering: pixelated;
+      position: relative;
       height: ${({ theme }) => theme.sizes.taskbar.entry.icon.size};
       width: ${({ theme }) => theme.sizes.taskbar.entry.icon.size};
     }
