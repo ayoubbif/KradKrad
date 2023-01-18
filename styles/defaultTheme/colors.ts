@@ -22,7 +22,7 @@ const colors = {
   text: '#000',
   titlebar: {
     background: '#efe',
-    text: 'rgb(30, 196, 20)',
+    text: '#001',
     textInactive: 'rgb(320, 106, 75)',
     backgroundInactive: 'rgb(90, 93, 86)',
     buttonInactive: 'rgb(128, 128, 128)'
