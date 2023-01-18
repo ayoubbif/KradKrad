@@ -1,5 +1,6 @@
 import { useProcesses } from 'contexts/process';
-import { useRef } from 'react';
+import { useSession } from 'contexts/session';
+import { useMemo, useRef } from 'react';
 import { ProcessComponentProps } from '../Processes/RenderProcess';
 import RndWindow from './RndWindow';
 import StyledWindow from './StyledWindow';
@@ -13,15 +14,18 @@ type WindowProps = ProcessComponentProps & {
 const Window = ({ children, id }: WindowProps): JSX.Element => {
   const {
     processes: {
-      [id]: { minimized, backgroundColor }
+      [id]: { backgroundColor, minimized = false }
     }
   } = useProcesses();
+  const { foregroundId } = useSession();
+  const isForeground = useMemo(() => id === foregroundId, [foregroundId, id]);
   const windowRef = useRef<HTMLElement | null>(null);
   const { zIndex, ...focusableProps } = useFocusable(id, windowRef);
 
   return (
     <RndWindow id={id} style={{ zIndex }}>
       <StyledWindow
+        foreground={isForeground}
         minimized={minimized}
         ref={windowRef}
         style={{ backgroundColor }}
@@ -35,3 +39,4 @@ const Window = ({ children, id }: WindowProps): JSX.Element => {
 };
 
 export default Window;
+
