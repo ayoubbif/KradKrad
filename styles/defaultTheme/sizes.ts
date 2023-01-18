@@ -27,7 +27,7 @@ const sizes = {
       fontSize: '12px',
       maxWidth: '161px',
       icon: {
-        size: '20px'
+        size: '18px'
       }
     }
   },
