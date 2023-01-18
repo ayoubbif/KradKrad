@@ -8,17 +8,25 @@ export default [
     cover: '/covers/intro.png'
   },
   {
-    id: 0,
+    id: 1,
     title: 'Santa Cruz',
     artist: 'F11-D',
     file: '/audio/songs/santa_cruz.mp3',
     cover: '/covers/santa_cruz.png'
   },
   {
-    id: 0,
+    id: 2,
+    title: 'WRONG',
+    artist: 'F11-D',
+    file: '/audio/songs/wrong.mp3',
+    cover: '/covers/wrong.png'
+  },
+  {
+    id: 3,
     title: 'Outro',
     artist: 'F11-D',
     file: '/audio/songs/outro.mp3',
     cover: '/covers/outro.png'
   }
 ];
+
