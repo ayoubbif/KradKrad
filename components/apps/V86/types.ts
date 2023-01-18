@@ -1,15 +1,9 @@
+/* eslint-disable camelcase */
 import type { config as v86Config } from 'components/apps/V86/config';
 
 export type EventCallback = (data: number[]) => void;
 
 type EventListener = (event: string, callback: EventCallback) => void;
-
-type V86Image = {
-  async?: boolean;
-  size?: number;
-  url: string;
-  use_parts?: boolean;
-};
 
 export type V86Starter = {
   add_listener: EventListener;
@@ -21,6 +15,13 @@ export type V86Starter = {
 export type V86 = {
   emulator: V86Starter | null;
   lockMouse: () => void;
+};
+
+type V86Image = {
+  async?: boolean;
+  size?: number;
+  url: string;
+  use_parts?: boolean;
 };
 
 type V86Config = typeof v86Config & {
@@ -36,7 +37,12 @@ interface V86Constructor {
   new (config: V86Config): V86Starter;
 }
 
-export type WindowWithV86Starter = Window &
-  typeof globalThis & { V86Starter: V86Constructor };
+declare global {
+  interface Window {
+    V86Starter: V86Constructor;
+  }
+  interface Navigator {
+    deviceMemory: number;
+  }
+}
 
-export type NavigatorWithMemory = Navigator & { deviceMemory: number };

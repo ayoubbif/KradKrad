@@ -33,13 +33,6 @@ const processDirectory: Processes = {
     icon: '/icons/explorer.png',
     title: 'Directory'
   },
-  Computer: {
-    autoSizing: false,
-    Component: dynamic(() => import('components/apps/Computer')),
-    hasWindow: true,
-    icon: '/icons/computer.png',
-    title: 'Computer'
-  },
   V86: {
     autoSizing: true,
     backgroundColor: '#000',
@@ -66,3 +59,4 @@ const processDirectory: Processes = {
 };
 
 export default processDirectory;
+

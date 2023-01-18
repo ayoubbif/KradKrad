@@ -9,13 +9,14 @@ export type DosCI = {
   };
 };
 
-export type WindowWithDos = Window &
-  typeof globalThis & {
+declare global {
+  interface Window {
     Dos: (element: HTMLElement) => {
       run: (url: string) => Promise<DosCI>;
     };
     emulators: {
       pathPrefix: string;
     };
-  };
+  }
+}
 
