@@ -43,7 +43,8 @@ const processDirectory: Processes = {
     Component: dynamic(() => import('components/apps/MusicPlayer')),
     hasWindow: true,
     icon: '/icons/musicplayer.png',
-    title: 'Music Player'
+    title: 'Music Player',
+    lockAspectRatio: false
   },
   JSDOS: {
     autoSizing: true,

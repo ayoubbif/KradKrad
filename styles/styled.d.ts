@@ -10,10 +10,6 @@ declare module 'styled-components' {
       fileEntry: {
         background: string;
         border: string;
-        backgroundFocused: string;
-        backgroundFocusedHover: string;
-        borderFocused: string;
-        borderFocusedHover: string;
         text: string;
         textShadow: string;
       };
