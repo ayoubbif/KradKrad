@@ -1,6 +1,6 @@
-import type { ProcessContextState } from './process/useProcessContextState';
-import type { FileSystemContextState } from './fileSystem/useFileSystemContextState';
-import type { SessionContextState } from './session/useSessionContextState';
+import type { FileSystemContextState } from 'contexts/fileSystem/useFileSystemContextState';
+import type { ProcessContextState } from 'contexts/process/useProcessContextState';
+import type { SessionContextState } from 'contexts/session/useSessionContextState';
 
 export const initialFileSystemContextState: FileSystemContextState = {
   fs: null
@@ -8,22 +8,22 @@ export const initialFileSystemContextState: FileSystemContextState = {
 
 export const initialProcessContextState: ProcessContextState = {
   close: () => undefined,
-  open: () => undefined,
+  linkElement: () => undefined,
   maximize: () => undefined,
   minimize: () => undefined,
-  linkElement: () => undefined,
-  title: () => undefined,
-  mapProcesses: () => [],
-  processes: {}
+  open: () => undefined,
+  processes: {},
+  title: () => undefined
 };
 
 export const initialSessionContextState: SessionContextState = {
-  themeName: '',
-  windowStates: {},
-  setThemeName: () => undefined,
-  setWindowStates: () => undefined,
   foregroundId: '',
   setForegroundId: () => undefined,
+  setStackOrder: () => undefined,
+  setThemeName: () => undefined,
+  setWindowStates: () => undefined,
   stackOrder: [],
-  setStackOrder: () => undefined
+  themeName: '',
+  windowStates: {}
 };
+

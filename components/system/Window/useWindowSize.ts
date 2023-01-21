@@ -1,7 +1,7 @@
 import { useSession } from 'contexts/session';
-import { stripUnit } from 'polished';
 import { useCallback } from 'react';
 import { useTheme } from 'styled-components';
+import { pxToNum } from 'utils/functions';
 
 type WindowSize = {
   updateWindowSize: (height: number, width: number) => void;
@@ -19,7 +19,7 @@ const useWindowSize = (id: string): WindowSize => {
         ...currentWindowStates,
         [id]: {
           size: {
-            height: height + Number(stripUnit(titlebar.height)),
+            height: height + pxToNum(titlebar.height),
             width
           }
         }
@@ -33,3 +33,4 @@ const useWindowSize = (id: string): WindowSize => {
 };
 
 export default useWindowSize;
+
