@@ -5,21 +5,18 @@ export type ProcessElements = {
   taskbarEntry?: HTMLElement;
 };
 
-export type ProcessToggles = {
+export type Process = ProcessElements & {
+  autoSizing?: boolean;
+  backgroundColor?: string;
+  Component: React.ComponentType<ProcessComponentProps>;
+  hasWindow?: boolean;
+  icon: string;
   maximized?: boolean;
   minimized?: boolean;
+  title: string;
+  url?: string;
+  lockAspectRatio?: boolean;
 };
-
-export type Process = ProcessElements &
-  ProcessToggles & {
-    autoSizing?: boolean;
-    backgroundColor?: string;
-    Component: React.ComponentType<ProcessComponentProps>;
-    hasWindow?: boolean;
-    icon: string;
-    title: string;
-    url?: string;
-  };
 
 export type Processes = {
   [id: string]: Process;
@@ -54,7 +51,8 @@ const processDirectory: Processes = {
     Component: dynamic(() => import('components/apps/JSDOS')),
     hasWindow: true,
     icon: '/icons/jsdos.png',
-    title: 'js-dos v7'
+    title: 'js-dos v7',
+    lockAspectRatio: true
   }
 };
 

@@ -5,8 +5,7 @@ const sizes = {
   },
   fileEntry: {
     fontSize: '12px',
-    iconSize: '45px',
-    letterSpacing: '0.5px'
+    iconSize: '45px'
   },
 
   fileManager: {
@@ -46,4 +45,3 @@ const sizes = {
 };
 
 export default sizes;
-

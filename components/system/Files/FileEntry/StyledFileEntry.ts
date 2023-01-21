@@ -7,7 +7,6 @@ const StyledFileEntry = styled.li`
   &:hover {
     background-color: ${({ theme }) => theme.colors.fileEntry.background};
     border: ${({ theme }) => theme.colors.fileEntry.border};
-    letter-spacing: ${({ theme }) => theme.sizes.fileEntry.letterSpacing};
     padding: 0;
     position: relative;
 
@@ -44,3 +43,4 @@ const StyledFileEntry = styled.li`
 `;
 
 export default StyledFileEntry;
+

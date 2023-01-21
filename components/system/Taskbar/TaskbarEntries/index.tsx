@@ -1,12 +1,12 @@
+import StyledTaskbarEntries from 'components/system/Taskbar/TaskbarEntries/StyledTaskbarEntries';
 import TaskbarEntry from 'components/system/Taskbar/TaskbarEntry';
 import { ProcessConsumer } from 'contexts/process';
-import StyledTaskbarEntries from './StyledTaskbarEntries';
 
 const TaskbarEntries = (): JSX.Element => (
   <StyledTaskbarEntries>
     <ProcessConsumer>
-      {({ mapProcesses }) =>
-        mapProcesses(([id, { icon, title }]) => (
+      {({ processes }) =>
+        Object.entries(processes).map(([id, { icon, title }]) => (
           <TaskbarEntry key={id} icon={icon} id={id} title={title} />
         ))
       }
