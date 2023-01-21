@@ -15,6 +15,7 @@ export type Process = ProcessElements & {
   minimized?: boolean;
   title: string;
   url?: string;
+  lockAspectRatio?: boolean;
 };
 
 export type Processes = {
@@ -50,9 +51,9 @@ const processDirectory: Processes = {
     Component: dynamic(() => import('components/apps/JSDOS')),
     hasWindow: true,
     icon: '/icons/jsdos.png',
-    title: 'js-dos v7'
+    title: 'js-dos v7',
+    lockAspectRatio: true
   }
 };
 
 export default processDirectory;
-
