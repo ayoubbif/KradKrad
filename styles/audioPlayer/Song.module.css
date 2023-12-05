@@ -1,5 +1,5 @@
 .turning {
-  animation: 10s infinite linear turning;
+  animation: turning 10s infinite linear;
   border-radius: 50%;
 }
 
@@ -9,7 +9,7 @@
 
 @keyframes turning {
   from {
-    transform: rotate(0);
+    transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
@@ -82,3 +82,4 @@
   justify-content: center;
   margin: 1rem auto;
 }
+

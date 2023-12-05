@@ -18,9 +18,7 @@ export const getStaticProps = async () => {
 const AudioP = ({ id }): JSX.Element => {
   const tracklist = mainResponse;
   const {
-    processes: {
-      [id]: { url = '' }
-    }
+    processes: {}
   } = useProcesses();
 
   return (
