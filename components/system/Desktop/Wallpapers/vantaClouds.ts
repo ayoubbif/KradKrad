@@ -14,7 +14,7 @@ export type VantaCloudsSettings = {
 };
 
 const disableControls = {
-  mouseControls: false,
+  mouseControls: true,
   touchControls: false,
   gyroControls: false
 };

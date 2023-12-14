@@ -4,14 +4,14 @@ const sizes = {
     width: '100px'
   },
   fileEntry: {
-    fontSize: '12px',
-    iconSize: '45px'
+    fontSize: '10px',
+    iconSize: '40px'
   },
 
   fileManager: {
     columnGap: '1px',
-    gridEntryHeight: '80px',
-    gridEntryWidth: '80px',
+    gridEntryHeight: '69px',
+    gridEntryWidth: '69px',
     padding: '15px'
   },
   startButton: {
@@ -33,10 +33,10 @@ const sizes = {
   titlebar: {
     buttonIconWidth: '20px',
     buttonWidth: '45px',
-    fontSize: '13px',
+    fontSize: '16px',
     height: '30px',
     iconMargin: '0 5px 0 8px',
-    iconSize: '19px'
+    iconSize: '20PX'
   },
   window: {
     lineHeight: '14px',

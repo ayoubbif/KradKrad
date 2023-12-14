@@ -1,5 +1,5 @@
 .turning {
-  animation: turning 10s infinite linear;
+  animation: turning 1ms infinite;
   border-radius: 50%;
 }
 
@@ -82,4 +82,3 @@
   justify-content: center;
   margin: 1rem auto;
 }
-

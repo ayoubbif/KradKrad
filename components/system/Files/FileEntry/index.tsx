@@ -49,4 +49,3 @@ const FileEntry = ({ name, path }: FileEntryProps): JSX.Element => {
 };
 
 export default FileEntry;
-

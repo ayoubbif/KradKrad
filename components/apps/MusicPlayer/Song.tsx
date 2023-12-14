@@ -17,7 +17,7 @@ const SongComponent = (props: { song: Song; isPlaying: boolean }) => {
     if (props.isPlaying) {
       // Rotate continuously when playing
       const rotateInterval = setInterval(() => {
-        setRotation((prevRotation) => (prevRotation + 1) % 360);
+        setRotation((prevRotation) => prevRotation % 360);
       }, 1); // Adjust the interval based on your animation speed
 
       return () => clearInterval(rotateInterval); // Clear the interval on component unmount

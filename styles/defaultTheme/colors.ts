@@ -21,14 +21,14 @@ const colors = {
   },
   text: '#000',
   titlebar: {
-    background: '#efe',
-    text: '#001',
-    textInactive: 'rgb(320, 106, 75)',
-    backgroundInactive: 'rgb(90, 93, 86)',
-    buttonInactive: 'rgb(128, 128, 128)'
+    background: '#AF3',
+    text: '#55',
+    textInactive: 'rgb(200, 100, 50)',
+    backgroundInactive: 'rgb(36, 136, 210)',
+    buttonInactive: 'rgb(0, 0, 0)'
   },
   window: {
-    background: '#fcc69',
+    background: '#fcb69',
     outline: 'hsl(0deg 0% 25% / 75%)',
     outlineInactive: 'hsl(0deg 10% 30% / 75%)',
     shadow: '0 0 8px 0 rgba(0, 0, 0, 50%)',

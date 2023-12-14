@@ -1,13 +1,13 @@
 import vantaClouds from 'components/system/Desktop/Wallpapers/vantaClouds';
 
 const wallpaper = vantaClouds({
-  skyColor: 0xacafe1,
-  cloudColor: 0x555a27,
-  cloudShadowColor: 0x136dec,
-  sunColor: 0xf35600,
-  sunGlareColor: 0xaca555,
-  sunlightColor: 0x3fff6a,
-  speed: 1.0
+  skyColor: 0x2383c2,
+  cloudColor: 0x8aa497,
+  cloudShadowColor: 0x7660ae,
+  sunColor: 0xd1ca21,
+  sunGlareColor: 0xed5031,
+  sunlightColor: 0xef7926,
+  speed: 1.5
 });
 
 export default wallpaper;
