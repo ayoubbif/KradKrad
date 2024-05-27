@@ -17,7 +17,7 @@
     "test:watch": "jest --watch"
   },
   "engines": {
-    "node": "v20.x"
+    "node": "v18.x"
   },
   "dependencies": {
     "@types/node": "18.11.18",
