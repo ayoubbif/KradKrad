@@ -33,10 +33,10 @@ const sizes = {
   titlebar: {
     buttonIconWidth: '20px',
     buttonWidth: '45px',
-    fontSize: '16px',
+    fontSize: '12px',
     height: '30px',
-    iconMargin: '0 5px 0 8px',
-    iconSize: '20PX'
+    iconMargin: '0 6px 0 8px',
+    iconSize: '16PX'
   },
   window: {
     lineHeight: '14px',
