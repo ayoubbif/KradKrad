@@ -25,36 +25,44 @@ const useV86 = (
 
   useEffect(() => {
     if (!emulator && fs && url && screenContainer?.current) {
-      fs?.readFile(url, (_error, contents = Buffer.from('')) => {
-        loadFiles(libs).then(() => {
-          const isISO = extname(url).toLowerCase() === '.iso';
-          const { deviceMemory = 8 } = navigator;
-          const memoryRatio = deviceMemory / 8;
-          const bufferUrl = bufferToUrl(contents);
-          const v86ImageConfig: V86ImageConfig = {
-            [isISO ? 'cdrom' : getImageType(contents.length)]: {
-              async: false,
-              size: contents.length,
-              url: bufferUrl,
-              use_parts: false
-            }
-          };
-          const v86 = new window.V86Starter({
-            memory_size: memoryRatio * 1024 * 1024 * 1024,
-            vga_memory_size: memoryRatio * 32 * 1024 * 1024,
-            boot_order: isISO ? BOOT_CD_FD_HD : BOOT_FD_CD_HD,
-            screen_container: screenContainer.current,
-            ...v86ImageConfig,
-            ...config
-          });
-
-          v86.add_listener('emulator-loaded', () => {
-            appendFileToTitle(url);
-            cleanUpBufferUrl(bufferUrl);
-          });
-
-          setEmulator(v86);
+      fs?.readFile(url, async (_error, contents = Buffer.from('')) => {
+        await loadFiles(libs);
+        
+        // Check if V86Starter is available
+        if (!window.V86Starter) {
+          console.error('V86Starter is not defined');
+          return;
+        }
+        
+        const isISO = extname(url).toLowerCase() === '.iso';
+        const { deviceMemory = 8 } = navigator;
+        const memoryRatio = deviceMemory / 8;
+        const bufferUrl = bufferToUrl(contents);
+        const v86ImageConfig: V86ImageConfig = {
+          [isISO ? 'cdrom' : getImageType(contents.length)]: {
+            async: false,
+            size: contents.length,
+            url: bufferUrl,
+            use_parts: false
+          }
+        };
+        
+        console.log('Initializing V86Starter');
+        const v86 = new window.V86Starter({
+          memory_size: memoryRatio * 1024 * 1024 * 1024,
+          vga_memory_size: memoryRatio * 32 * 1024 * 1024,
+          boot_order: isISO ? BOOT_CD_FD_HD : BOOT_FD_CD_HD,
+          screen_container: screenContainer.current,
+          ...v86ImageConfig,
+          ...config
         });
+
+        v86.add_listener('emulator-loaded', () => {
+          appendFileToTitle(url);
+          cleanUpBufferUrl(bufferUrl);
+        });
+
+        setEmulator(v86);
       });
     }
 
