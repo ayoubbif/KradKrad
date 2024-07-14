@@ -3,7 +3,6 @@
   "description": "The Basement is the place to be",
   "version": "1.0.0",
   "private": true,
-
   "browserslist": [
     "defaults and supports es6 and not ie 11 and >1%"
   ],
@@ -27,6 +26,7 @@
     "browserfs": "github:jvilk/BrowserFS",
     "eslint-config-next": "^14.2.3",
     "ini": "^3.0.1",
+    "js-dos": "^8.1.15",
     "jszip": "^3.10.1",
     "next": "^14.2.5",
     "polished": "^4.2.2",
