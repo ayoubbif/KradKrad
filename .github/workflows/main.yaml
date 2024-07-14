@@ -1,6 +1,11 @@
-name: Tests
+name: Deployment
 
-on: push
+concurrency: production
+
+on:
+  push:
+    branches:
+      - main
 
 jobs:
   tests:
