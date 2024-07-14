@@ -3,6 +3,10 @@
   "description": "The Basement is the place to be",
   "version": "1.0.0",
   "private": true,
+
+  "browserslist": [
+    "defaults and supports es6 and not ie 11 and >1%"
+  ],
   "scripts": {
     "dev": "next dev",
     "build": "npm run build:fs && next build",
