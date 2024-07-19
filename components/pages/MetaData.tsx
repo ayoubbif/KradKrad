@@ -7,6 +7,7 @@ const MetaData = (): JSX.Element => (
     <title>The Basement</title>
     <link rel="icon" href="/favicon.ico"></link>
     <meta name="description" content={packageInfo.description} />
+    <meta name="google-site-verification" content="N9Dt3r0gaJII2ppcjPn7lP79g3G_hqvl38yve7JYnDE" />
   </Head>
 );
 
